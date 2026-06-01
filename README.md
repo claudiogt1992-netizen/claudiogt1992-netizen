@@ -27,10 +27,8 @@ Meu objetivo é construir soluções modernas, seguras e escaláveis para a web.
 ## 🚀 Tecnologias em estudo
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,angular,react,js,ts,python,html,css,php,git,github,vscode" />
+  <img src="https://skillicons.dev/icons?i=java,spring,angular,react,js,ts,python,html,css,php,git,github,vscode,idea" />
 </p>
-
-********Java • Spring Boot • Angular • React • JavaScript • TypeScript • Python • HTML • CSS • PHP********
 
 ---
 
