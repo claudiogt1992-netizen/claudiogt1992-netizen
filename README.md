@@ -47,8 +47,8 @@ Java • Spring Boot • Angular • React • JavaScript • TypeScript • Pyt
 
 ## 📫 Contato
 
-- LinkedIn: coloque aqui seu LinkedIn
-- Email: coloque aqui seu email profissional
+- LinkedIn: https://www.linkedin.com/in/claudiojgtavares/
+- Email: claudiogt1992@gmail.com
 
 ---
 
