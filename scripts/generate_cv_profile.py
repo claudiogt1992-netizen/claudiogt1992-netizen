@@ -19,10 +19,12 @@ def github_get(url):
         "Accept": "application/vnd.github+json",
         "User-Agent": "cabo-verde-dev-pulse-refined",
     }
+
     if TOKEN:
         headers["Authorization"] = f"Bearer {TOKEN}"
 
     req = urllib.request.Request(url, headers=headers)
+
     with urllib.request.urlopen(req, timeout=25) as response:
         return json.loads(response.read().decode("utf-8"))
 
@@ -51,12 +53,14 @@ def fetch_repos(username):
 def star_points(cx, cy, outer_r, inner_r):
     pts = []
     angle = -math.pi / 2
+
     for i in range(10):
         r = outer_r if i % 2 == 0 else inner_r
         x = cx + math.cos(angle) * r
         y = cy + math.sin(angle) * r
         pts.append(f"{x:.2f},{y:.2f}")
         angle += math.pi / 5
+
     return " ".join(pts)
 
 
@@ -87,12 +91,15 @@ def tech_chip(x, y, label, color, delay):
     return f"""
     <g transform="translate({x} {y})">
       <animateTransform attributeName="transform" type="translate"
-        values="{x} {y};{x} {y-2};{x} {y}"
+        values="{x} {y};{x} {y - 2};{x} {y}"
         dur="3.2s" begin="-{delay}s" repeatCount="indefinite"/>
+
       <rect width="118" height="38" rx="19" fill="#08172D" fill-opacity="0.93" stroke="{color}" stroke-opacity="0.34"/>
+
       <circle cx="18" cy="19" r="5.5" fill="{color}">
         <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" begin="-{delay}s" repeatCount="indefinite"/>
       </circle>
+
       <text x="32" y="24" fill="#F5F9FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">{esc(label)}</text>
     </g>
     """
@@ -102,17 +109,18 @@ def stat_card(x, y, width, height, number, label, accent, delay):
     return f"""
     <g transform="translate({x} {y})">
       <rect width="{width}" height="{height}" rx="22" fill="#08172B" fill-opacity="0.84" stroke="{accent}" stroke-opacity="0.34"/>
+
       <rect width="{width}" height="{height}" rx="22" fill="none" stroke="{accent}">
         <animate attributeName="stroke-opacity" values="0.22;0.6;0.22" dur="3.1s" begin="-{delay}s" repeatCount="indefinite"/>
       </rect>
 
       <rect x="-34" y="0" width="28" height="{height}" rx="14" fill="#FFFFFF" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="0 0;{width+75} 0" dur="5s" begin="-{delay}s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0 0;{width + 75} 0" dur="5s" begin="-{delay}s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0;0.13;0" dur="5s" begin="-{delay}s" repeatCount="indefinite"/>
       </rect>
 
-      <text x="{width/2}" y="40" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">{number}</text>
-      <text x="{width/2}" y="66" text-anchor="middle" fill="#BEDBFF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">{esc(label)}</text>
+      <text x="{width / 2}" y="40" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">{number}</text>
+      <text x="{width / 2}" y="66" text-anchor="middle" fill="#BEDBFF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">{esc(label)}</text>
     </g>
     """
 
@@ -153,7 +161,7 @@ def main():
     ])
 
     logo_ring = star_ring(68, 68, 40, 5.8, 2.5, True)
-    flag_ring_static = star_ring(52, 24, 15, 2.9, 1.25, False)
+    flag_ring_static = star_ring(52, 27, 15, 2.9, 1.25, False)
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-label="Cabo Verde Dev Pulse">
   <defs>
@@ -225,7 +233,7 @@ def main():
     {logo_ring}
   </g>
 
-  <!-- header text aligned more to the right -->
+  <!-- header text -->
   <text x="170" y="82" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">Cabo Verde Dev Pulse</text>
   <text x="170" y="114" fill="#D7E9FF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">{esc(USERNAME)} • Cabo Verde • Systems Engineering &amp; Computer Science Student</text>
   <text x="170" y="137" fill="#7DC3FF" font-family="Segoe UI, Arial, sans-serif" font-size="13">Atualizado: {esc(updated)}</text>
@@ -233,12 +241,12 @@ def main():
   <!-- header divider -->
   <line x1="46" y1="160" x2="1148" y2="160" stroke="url(#cyanLine)" stroke-width="2"/>
 
-  <!-- top right flag, better aligned, stars static -->
+  <!-- top right flag -->
   <g transform="translate(1018 36)" filter="url(#shadow)">
     <rect x="0" y="0" width="140" height="90" rx="20" fill="#09182E" fill-opacity="0.78" stroke="#1E4C7D" stroke-opacity="0.45"/>
 
     <g transform="translate(18 17)">
-      <!-- cloth waving -->
+      <!-- blue cloth waving -->
       <path fill="#003893">
         <animate attributeName="d" dur="3.6s" repeatCount="indefinite"
           values="
@@ -247,6 +255,7 @@ def main():
           M0 0 C18 -4, 40 4, 54 0 C68 -4, 88 4, 104 0 L104 47 C88 51, 68 43, 54 47 C40 51, 18 43, 0 47 Z"/>
       </path>
 
+      <!-- white stripe upper -->
       <path fill="#FFFFFF">
         <animate attributeName="d" dur="3.6s" repeatCount="indefinite"
           values="
@@ -255,6 +264,7 @@ def main():
           M0 16 C18 13, 40 19, 54 16 C68 13, 88 19, 104 16 L104 22 C88 25, 68 19, 54 22 C40 25, 18 19, 0 22 Z"/>
       </path>
 
+      <!-- red stripe -->
       <path fill="#CF2027">
         <animate attributeName="d" dur="3.6s" repeatCount="indefinite"
           values="
@@ -263,6 +273,7 @@ def main():
           M0 22 C18 19, 40 25, 54 22 C68 19, 88 25, 104 22 L104 30 C88 33, 68 27, 54 30 C40 33, 18 27, 0 30 Z"/>
       </path>
 
+      <!-- white stripe lower -->
       <path fill="#FFFFFF">
         <animate attributeName="d" dur="3.6s" repeatCount="indefinite"
           values="
@@ -271,6 +282,7 @@ def main():
           M0 30 C18 27, 40 33, 54 30 C68 27, 88 33, 104 30 L104 36 C88 39, 68 33, 54 36 C40 39, 18 33, 0 36 Z"/>
       </path>
 
+      <!-- static stars centered in flag -->
       <g>
         {flag_ring_static}
       </g>
@@ -287,7 +299,7 @@ def main():
     Systems Engineering &amp; Computer Science Student
   </text>
 
-  <!-- tech row moved downward -->
+  <!-- tech row -->
   {tech_svg}
 
   <!-- stat cards -->
@@ -297,8 +309,8 @@ def main():
   <path d="M0 347 C150 328, 300 362, 450 347 C600 332, 750 362, 900 347 C1030 332, 1115 350, 1200 340 L1200 430 L0 430 Z" fill="url(#ocean)">
     <animateTransform attributeName="transform" type="translate" values="-14 0;14 0;-14 0" dur="8s" repeatCount="indefinite"/>
   </path>
-
-
+</svg>
+"""
 
     os.makedirs("assets", exist_ok=True)
 
