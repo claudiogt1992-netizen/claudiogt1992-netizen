@@ -142,10 +142,8 @@ Meu objetivo é construir soluções modernas, seguras e escaláveis para a web,
 ## 🎮 Dev Journey
 
 <p align="center">
-  <img src="./assets/platformer-animation.svg" alt="Platformer animation - Full Stack Java Journey" width="100%" />
+  <img src="https://raw.githubusercontent.com/claudiogt1992-netizen/claudiogt1992-netizen/main/assets/platformer-animation.svg?v=1" alt="Platformer animation - Full Stack Java Journey" width="100%" />
 </p>
-
----
 
 ## 📫 Contato
 
