@@ -298,12 +298,7 @@ def main():
     <animateTransform attributeName="transform" type="translate" values="-14 0;14 0;-14 0" dur="8s" repeatCount="indefinite"/>
   </path>
 
-  <!-- footer -->
-  <text x="600" y="395" text-anchor="middle" fill="#C0DDFF" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="500">
-    10 ilhas • 1 visão • tecnologia com identidade
-  </text>
-</svg>
-"""
+
 
     os.makedirs("assets", exist_ok=True)
 
