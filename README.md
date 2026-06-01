@@ -5,9 +5,6 @@
 <p align="center">
   <img src="./assets/cabo-verde-dev-pulse.svg" alt="Cabo Verde Dev Pulse" width="100%" />
 </p>
-<p align="center">
-  <img src="./github-banner.png" alt="Banner do GitHub de Cláudio Tavares" width="100%" />
-</p>
 
 <h1 align="center">Olá, eu sou Cláudio Tavares 👋</h1>
 
@@ -19,9 +16,9 @@
 
 ## 👨‍💻 Sobre mim
 
-Sou estudante de Engenharia de Sistemas e Informática e estou em transição para a área de Desenvolvimento de Software, com foco em me tornar Desenvolvedor Full Stack Java.
+Sou estudante de **Engenharia de Sistemas e Informática** e estou em transição para a área de **Desenvolvimento de Software**, com foco em me tornar **Desenvolvedor Full Stack Java**.
 
-Atualmente atuo como Agente de Segurança no Banco de Cabo Verde, experiência que fortaleceu minha disciplina, responsabilidade, atenção aos detalhes e visão sobre segurança, organização e processos.
+Atualmente atuo como **Agente de Segurança no Banco de Cabo Verde**, experiência que fortaleceu minha disciplina, responsabilidade, atenção aos detalhes, visão sobre segurança, organização e processos.
 
 Meu objetivo é construir soluções modernas, seguras e escaláveis para a web.
 
@@ -29,7 +26,11 @@ Meu objetivo é construir soluções modernas, seguras e escaláveis para a web.
 
 ## 🚀 Tecnologias em estudo
 
-Java • Spring Boot • Angular • React • JavaScript • TypeScript • Python • HTML • CSS • PHP
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=java,spring,angular,react,js,ts,python,html,css,php,git,github,vscode" />
+</p>
+
+**Java • Spring Boot • Angular • React • JavaScript • TypeScript • Python • HTML • CSS • PHP**
 
 ---
 
@@ -54,8 +55,8 @@ Java • Spring Boot • Angular • React • JavaScript • TypeScript • Pyt
 
 ## 📫 Contato
 
-- LinkedIn: https://www.linkedin.com/in/claudiojgtavares/
-- Email: claudiogt1992@gmail.com
+- LinkedIn: [linkedin.com/in/claudiojgtavares](https://www.linkedin.com/in/claudiojgtavares/)
+- Email: [claudiogt1992@gmail.com](mailto:claudiogt1992@gmail.com)
 
 ---
 
