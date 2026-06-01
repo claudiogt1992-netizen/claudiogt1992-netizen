@@ -17,13 +17,12 @@ def esc(value):
 def github_get(url):
     headers = {
         "Accept": "application/vnd.github+json",
-        "User-Agent": "cabo-verde-dev-pulse-clean-pro",
+        "User-Agent": "cabo-verde-dev-pulse-refined",
     }
     if TOKEN:
         headers["Authorization"] = f"Bearer {TOKEN}"
 
     req = urllib.request.Request(url, headers=headers)
-
     with urllib.request.urlopen(req, timeout=25) as response:
         return json.loads(response.read().decode("utf-8"))
 
@@ -71,12 +70,11 @@ def star_ring(cx, cy, ring_r, outer_r, inner_r, pulse=True):
         pts = star_points(sx, sy, outer_r, inner_r)
 
         if pulse:
-            dur = 2.2 + (i % 4) * 0.25
+            dur = 2.3 + (i % 4) * 0.22
             begin = -(i * 0.15)
             stars.append(f"""
             <polygon points="{pts}" fill="#F7D116" opacity="0.88">
               <animate attributeName="opacity" values="0.45;1;0.45" dur="{dur}s" begin="{begin}s" repeatCount="indefinite"/>
-              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="{dur}s" begin="{begin}s" repeatCount="indefinite" additive="sum"/>
             </polygon>
             """)
         else:
@@ -91,12 +89,11 @@ def tech_chip(x, y, label, color, delay):
       <animateTransform attributeName="transform" type="translate"
         values="{x} {y};{x} {y-2};{x} {y}"
         dur="3.2s" begin="-{delay}s" repeatCount="indefinite"/>
-
-      <rect width="120" height="38" rx="19" fill="#09192E" fill-opacity="0.92" stroke="{color}" stroke-opacity="0.28"/>
-      <circle cx="19" cy="19" r="5.5" fill="{color}">
-        <animate attributeName="opacity" values="0.45;1;0.45" dur="2.5s" begin="-{delay}s" repeatCount="indefinite"/>
+      <rect width="118" height="38" rx="19" fill="#08172D" fill-opacity="0.93" stroke="{color}" stroke-opacity="0.34"/>
+      <circle cx="18" cy="19" r="5.5" fill="{color}">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" begin="-{delay}s" repeatCount="indefinite"/>
       </circle>
-      <text x="33" y="24" fill="#F2F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">{esc(label)}</text>
+      <text x="32" y="24" fill="#F5F9FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">{esc(label)}</text>
     </g>
     """
 
@@ -104,18 +101,18 @@ def tech_chip(x, y, label, color, delay):
 def stat_card(x, y, width, height, number, label, accent, delay):
     return f"""
     <g transform="translate({x} {y})">
-      <rect width="{width}" height="{height}" rx="22" fill="#08172B" fill-opacity="0.84" stroke="{accent}" stroke-opacity="0.32"/>
+      <rect width="{width}" height="{height}" rx="22" fill="#08172B" fill-opacity="0.84" stroke="{accent}" stroke-opacity="0.34"/>
       <rect width="{width}" height="{height}" rx="22" fill="none" stroke="{accent}">
-        <animate attributeName="stroke-opacity" values="0.22;0.62;0.22" dur="3.2s" begin="-{delay}s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-opacity" values="0.22;0.6;0.22" dur="3.1s" begin="-{delay}s" repeatCount="indefinite"/>
       </rect>
 
-      <rect x="-42" y="0" width="34" height="{height}" rx="17" fill="#FFFFFF" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="0 0;{width+90} 0" dur="5.2s" begin="-{delay}s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.13;0" dur="5.2s" begin="-{delay}s" repeatCount="indefinite"/>
+      <rect x="-34" y="0" width="28" height="{height}" rx="14" fill="#FFFFFF" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;{width+75} 0" dur="5s" begin="-{delay}s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.13;0" dur="5s" begin="-{delay}s" repeatCount="indefinite"/>
       </rect>
 
-      <text x="{width/2}" y="42" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">{number}</text>
-      <text x="{width/2}" y="68" text-anchor="middle" fill="#BEDBFF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">{esc(label)}</text>
+      <text x="{width/2}" y="40" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">{number}</text>
+      <text x="{width/2}" y="66" text-anchor="middle" fill="#BEDBFF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">{esc(label)}</text>
     </g>
     """
 
@@ -143,26 +140,26 @@ def main():
     ]
 
     tech_svg = "\n".join(
-        tech_chip(150 + i * 138, 248, name, color, i * 0.22)
+        tech_chip(148 + i * 132, 260, name, color, i * 0.22)
         for i, (name, color) in enumerate(technologies)
     )
 
     cards_svg = "\n".join([
-        stat_card(70, 328, 190, 88, public_repos, "Repositórios", "#00AEEF", 0.1),
-        stat_card(284, 328, 190, 88, followers, "Seguidores", "#2FB6FF", 0.5),
-        stat_card(498, 328, 190, 88, total_stars, "Estrelas", "#F7D116", 0.9),
-        stat_card(712, 328, 190, 88, total_forks, "Forks", "#8B5CF6", 1.3),
-        stat_card(926, 328, 190, 88, following, "Seguindo", "#C084FC", 1.7),
+        stat_card(70, 334, 190, 88, public_repos, "Repositórios", "#00AEEF", 0.1),
+        stat_card(284, 334, 190, 88, followers, "Seguidores", "#2FB6FF", 0.5),
+        stat_card(498, 334, 190, 88, total_stars, "Estrelas", "#F7D116", 0.9),
+        stat_card(712, 334, 190, 88, total_forks, "Forks", "#8B5CF6", 1.3),
+        stat_card(926, 334, 190, 88, following, "Seguindo", "#C084FC", 1.7),
     ])
 
     logo_ring = star_ring(68, 68, 40, 5.8, 2.5, True)
-    flag_ring = star_ring(58, 40, 19, 3.2, 1.35, True)
+    flag_ring_static = star_ring(54, 34, 17, 2.9, 1.25, False)
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-label="Cabo Verde Dev Pulse">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#030A14"/>
-      <stop offset="45%" stop-color="#061A35"/>
+      <stop offset="46%" stop-color="#061A35"/>
       <stop offset="100%" stop-color="#030711"/>
     </linearGradient>
 
@@ -198,23 +195,23 @@ def main():
   <rect width="1200" height="430" rx="28" fill="url(#bg)"/>
 
   <!-- ambient glow -->
-  <circle cx="150" cy="90" r="95" fill="url(#glow)">
+  <circle cx="150" cy="88" r="95" fill="url(#glow)">
     <animate attributeName="r" values="88;104;88" dur="7s" repeatCount="indefinite"/>
   </circle>
 
-  <circle cx="1030" cy="80" r="80" fill="url(#glow)" opacity="0.75">
-    <animate attributeName="r" values="72;88;72" dur="6.2s" repeatCount="indefinite"/>
+  <circle cx="1030" cy="78" r="82" fill="url(#glow)" opacity="0.72">
+    <animate attributeName="r" values="74;90;74" dur="6.2s" repeatCount="indefinite"/>
   </circle>
 
   <!-- subtle particles -->
   <g fill="#35C8FF" opacity="0.65">
-    <circle cx="228" cy="44" r="2.5">
+    <circle cx="230" cy="44" r="2.5">
       <animate attributeName="opacity" values="0.25;1;0.25" dur="2.7s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="948" cy="32" r="2.5">
+    <circle cx="950" cy="32" r="2.5">
       <animate attributeName="opacity" values="1;0.25;1" dur="2.9s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="1086" cy="150" r="2.5">
+    <circle cx="1090" cy="152" r="2.5">
       <animate attributeName="opacity" values="0.3;1;0.3" dur="3.1s" repeatCount="indefinite"/>
     </circle>
   </g>
@@ -228,85 +225,81 @@ def main():
     {logo_ring}
   </g>
 
-  <!-- header text -->
-  <text x="160" y="82" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">Cabo Verde Dev Pulse</text>
-  <text x="160" y="114" fill="#D7E9FF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">{esc(USERNAME)} • Cabo Verde • Systems Engineering &amp; Computer Science Student</text>
-  <text x="160" y="137" fill="#7DC3FF" font-family="Segoe UI, Arial, sans-serif" font-size="13">Atualizado: {esc(updated)}</text>
+  <!-- header text aligned more to the right -->
+  <text x="170" y="82" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">Cabo Verde Dev Pulse</text>
+  <text x="170" y="114" fill="#D7E9FF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">{esc(USERNAME)} • Cabo Verde • Systems Engineering &amp; Computer Science Student</text>
+  <text x="170" y="137" fill="#7DC3FF" font-family="Segoe UI, Arial, sans-serif" font-size="13">Atualizado: {esc(updated)}</text>
 
   <!-- header divider -->
   <line x1="46" y1="160" x2="1148" y2="160" stroke="url(#cyanLine)" stroke-width="2"/>
 
-  <!-- top right animated flag -->
-  <g transform="translate(1010 36)" filter="url(#shadow)">
-    <rect x="0" y="0" width="142" height="90" rx="20" fill="#09182E" fill-opacity="0.78" stroke="#1E4C7D" stroke-opacity="0.45"/>
+  <!-- top right flag, better aligned, stars static -->
+  <g transform="translate(1018 36)" filter="url(#shadow)">
+    <rect x="0" y="0" width="140" height="90" rx="20" fill="#09182E" fill-opacity="0.78" stroke="#1E4C7D" stroke-opacity="0.45"/>
 
-    <g transform="translate(18 14)">
-      <animateTransform attributeName="transform" type="translate"
-        values="18 14;18 9;18 14"
-        dur="3.8s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" additive="sum" type="rotate"
-        values="-4 54 30;4 54 30;-4 54 30"
-        dur="3.8s" repeatCount="indefinite"/>
-
+    <g transform="translate(18 17)">
+      <!-- cloth waving -->
       <path fill="#003893">
-        <animate attributeName="d" dur="3.8s" repeatCount="indefinite"
+        <animate attributeName="d" dur="3.6s" repeatCount="indefinite"
           values="
-          M0 8 C24 0, 52 14, 106 8 L106 58 C52 66, 24 52, 0 58 Z;
-          M0 8 C24 4, 52 12, 106 8 L106 58 C52 62, 24 54, 0 58 Z;
-          M0 8 C24 0, 52 14, 106 8 L106 58 C52 66, 24 52, 0 58 Z"/>
+          M0 0 C18 -4, 40 4, 54 0 C68 -4, 88 4, 104 0 L104 47 C88 51, 68 43, 54 47 C40 51, 18 43, 0 47 Z;
+          M0 0 C18 3, 40 -3, 54 0 C68 3, 88 -3, 104 0 L104 47 C88 44, 68 50, 54 47 C40 44, 18 50, 0 47 Z;
+          M0 0 C18 -4, 40 4, 54 0 C68 -4, 88 4, 104 0 L104 47 C88 51, 68 43, 54 47 C40 51, 18 43, 0 47 Z"/>
       </path>
 
       <path fill="#FFFFFF">
-        <animate attributeName="d" dur="3.8s" repeatCount="indefinite"
+        <animate attributeName="d" dur="3.6s" repeatCount="indefinite"
           values="
-          M0 27 C24 24, 52 31, 106 27 L106 33 C52 36, 24 29, 0 33 Z;
-          M0 27 C24 25, 52 30, 106 27 L106 33 C52 35, 24 30, 0 33 Z;
-          M0 27 C24 24, 52 31, 106 27 L106 33 C52 36, 24 29, 0 33 Z"/>
+          M0 16 C18 13, 40 19, 54 16 C68 13, 88 19, 104 16 L104 22 C88 25, 68 19, 54 22 C40 25, 18 19, 0 22 Z;
+          M0 16 C18 18, 40 14, 54 16 C68 18, 88 14, 104 16 L104 22 C88 20, 68 24, 54 22 C40 20, 18 24, 0 22 Z;
+          M0 16 C18 13, 40 19, 54 16 C68 13, 88 19, 104 16 L104 22 C88 25, 68 19, 54 22 C40 25, 18 19, 0 22 Z"/>
       </path>
 
       <path fill="#CF2027">
-        <animate attributeName="d" dur="3.8s" repeatCount="indefinite"
+        <animate attributeName="d" dur="3.6s" repeatCount="indefinite"
           values="
-          M0 33 C24 30, 52 37, 106 33 L106 42 C52 45, 24 38, 0 42 Z;
-          M0 33 C24 31, 52 36, 106 33 L106 42 C52 44, 24 39, 0 42 Z;
-          M0 33 C24 30, 52 37, 106 33 L106 42 C52 45, 24 38, 0 42 Z"/>
+          M0 22 C18 19, 40 25, 54 22 C68 19, 88 25, 104 22 L104 30 C88 33, 68 27, 54 30 C40 33, 18 27, 0 30 Z;
+          M0 22 C18 24, 40 20, 54 22 C68 24, 88 20, 104 22 L104 30 C88 28, 68 32, 54 30 C40 28, 18 32, 0 30 Z;
+          M0 22 C18 19, 40 25, 54 22 C68 19, 88 25, 104 22 L104 30 C88 33, 68 27, 54 30 C40 33, 18 27, 0 30 Z"/>
       </path>
 
       <path fill="#FFFFFF">
-        <animate attributeName="d" dur="3.8s" repeatCount="indefinite"
+        <animate attributeName="d" dur="3.6s" repeatCount="indefinite"
           values="
-          M0 42 C24 39, 52 46, 106 42 L106 48 C52 51, 24 44, 0 48 Z;
-          M0 42 C24 40, 52 45, 106 42 L106 48 C52 50, 24 45, 0 48 Z;
-          M0 42 C24 39, 52 46, 106 42 L106 48 C52 51, 24 44, 0 48 Z"/>
+          M0 30 C18 27, 40 33, 54 30 C68 27, 88 33, 104 30 L104 36 C88 39, 68 33, 54 36 C40 39, 18 33, 0 36 Z;
+          M0 30 C18 32, 40 28, 54 30 C68 32, 88 28, 104 30 L104 36 C88 34, 68 38, 54 36 C40 34, 18 38, 0 36 Z;
+          M0 30 C18 27, 40 33, 54 30 C68 27, 88 33, 104 30 L104 36 C88 39, 68 33, 54 36 C40 39, 18 33, 0 36 Z"/>
       </path>
 
-      {flag_ring}
+      <g>
+        {flag_ring_static}
+      </g>
     </g>
   </g>
 
   <!-- main title -->
-  <text x="600" y="220" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="800">
+  <text x="600" y="224" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="800">
     <tspan>Full Stack </tspan><tspan fill="#12CBFF">Java</tspan><tspan> Developer in Progress</tspan>
   </text>
 
-  <!-- subtitle moved away from icons -->
-  <text x="600" y="250" text-anchor="middle" fill="#AFCFFF" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="500">
+  <!-- subtitle clearly visible -->
+  <text x="600" y="254" text-anchor="middle" fill="#AFCFFF" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="500">
     Systems Engineering &amp; Computer Science Student
   </text>
 
-  <!-- tech row -->
+  <!-- tech row moved downward -->
   {tech_svg}
 
   <!-- stat cards -->
   {cards_svg}
 
   <!-- ocean motion -->
-  <path d="M0 345 C150 326, 300 362, 450 345 C600 328, 750 362, 900 345 C1030 330, 1115 350, 1200 340 L1200 430 L0 430 Z" fill="url(#ocean)">
+  <path d="M0 347 C150 328, 300 362, 450 347 C600 332, 750 362, 900 347 C1030 332, 1115 350, 1200 340 L1200 430 L0 430 Z" fill="url(#ocean)">
     <animateTransform attributeName="transform" type="translate" values="-14 0;14 0;-14 0" dur="8s" repeatCount="indefinite"/>
   </path>
 
   <!-- footer -->
-  <text x="600" y="396" text-anchor="middle" fill="#C0DDFF" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="500">
+  <text x="600" y="395" text-anchor="middle" fill="#C0DDFF" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="500">
     10 ilhas • 1 visão • tecnologia com identidade
   </text>
 </svg>
