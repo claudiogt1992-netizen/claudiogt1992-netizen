@@ -139,11 +139,10 @@ Meu objetivo é construir soluções modernas, seguras e escaláveis para a web,
 
 ---
 
-## 📊 GitHub Stats
+## 🎮 Dev Journey
 
 <p align="center">
-  <img height="170em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=claudiogt1992-netizen&show_icons=true&theme=tokyonight&hide_border=true&border_radius=10" alt="GitHub Stats" />
-  <img height="170em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=claudiogt1992-netizen&langs_count=8&layout=compact&theme=tokyonight&hide_border=true&border_radius=10" alt="Top Languages" />
+  <img src="./assets/platformer-animation.svg" alt="Platformer animation - Full Stack Java Journey" width="100%" />
 </p>
 
 ---
