@@ -55,12 +55,10 @@ Meu objetivo é construir soluções modernas, seguras e escaláveis para a web,
   <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="Spring Boot" width="50" />
   &nbsp;&nbsp;
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" width="50" />
-  &nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/maven/maven-original.svg" alt="Maven" width="50" />
 </p>
 
 <p align="center">
-  Java • Spring Boot • Maven • PHP
+  Java • Spring Boot • PHP
 </p>
 
 ---
@@ -115,15 +113,17 @@ Meu objetivo é construir soluções modernas, seguras e escaláveis para a web,
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/intellij/intellij-original.svg" alt="IntelliJ IDEA" width="50" />
   &nbsp;&nbsp;
   <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" width="50" />
+  &nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/maven/maven-original.svg" alt="Maven" width="50" />
 </p>
 
 <p align="center">
-  Git • GitHub • VS Code • IntelliJ IDEA • Postman
+  Git • GitHub • VS Code • IntelliJ IDEA • Postman • Maven
 </p>
 
 ---
 
-### 🐍 Outras linguagens em estudo
+### 🐍 Outras linguagens
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="50" />
