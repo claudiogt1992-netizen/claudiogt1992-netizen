@@ -2,6 +2,10 @@
   <img src="./assets/cabo-verde-dev-pulse.svg" alt="Cabo Verde Dev Pulse" width="100%" />
 </p>
 
+<p align="center">
+  <sub><strong>10 ilhas • 1 visão • tecnologia com identidade</strong></sub>
+</p>
+
 <h1 align="center">Olá, eu sou Cláudio Tavares 👋</h1>
 
 <h3 align="center">
