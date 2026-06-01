@@ -1,570 +1,439 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="820" viewBox="0 0 1650 820" role="img" aria-label="Cabo Verde Dev Pulse">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-label="Cabo Verde Dev Pulse">
   <defs>
-    <linearGradient id="bgMain" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#050B18"/>
-      <stop offset="42%" stop-color="#071733"/>
-      <stop offset="72%" stop-color="#061128"/>
-      <stop offset="100%" stop-color="#040913"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030A14"/>
+      <stop offset="45%" stop-color="#061A35"/>
+      <stop offset="100%" stop-color="#030711"/>
     </linearGradient>
 
-    <linearGradient id="cyanBeam" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00D1FF" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#00D1FF" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#00D1FF" stop-opacity="0"/>
+    <linearGradient id="cyanLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00BFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00BFFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#00BFFF" stop-opacity="0"/>
     </linearGradient>
 
-    <linearGradient id="cardGlass" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#10264C" stop-opacity="0.68"/>
-      <stop offset="100%" stop-color="#0A1630" stop-opacity="0.52"/>
+    <linearGradient id="ocean" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00AEEF" stop-opacity="0.17"/>
+      <stop offset="100%" stop-color="#003893" stop-opacity="0.06"/>
     </linearGradient>
 
-    <linearGradient id="cardInnerGlow" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1A3F7A" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#0A1733" stop-opacity="0.03"/>
-    </linearGradient>
-
-    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#BFEFFF" stop-opacity="0.42"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-    </linearGradient>
-
-    <linearGradient id="ocean1" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00CFFF" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#005CFF" stop-opacity="0.08"/>
-    </linearGradient>
-
-    <linearGradient id="ocean2" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#F7D116" stop-opacity="0.10"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05"/>
-    </linearGradient>
-
-    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#00CFFF" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#00CFFF" stop-opacity="0"/>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00BFFF" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#00BFFF" stop-opacity="0"/>
     </radialGradient>
 
-    <filter id="glowSoft" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="8" result="b"/>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
       <feMerge>
         <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <filter id="techGlow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="3.2" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <filter id="shadowSoft" x="-25%" y="-25%" width="170%" height="170%">
-      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.28"/>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.30"/>
     </filter>
   </defs>
 
-  <rect width="1650" height="820" rx="34" fill="url(#bgMain)"/>
+  <rect width="1200" height="430" rx="28" fill="url(#bg)"/>
 
-  <!-- ambient glows -->
-  <circle cx="250" cy="160" r="180" fill="url(#blueGlow)" opacity="0.55">
-    <animate attributeName="r" values="165;195;165" dur="8s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="1430" cy="116" r="140" fill="url(#blueGlow)" opacity="0.42">
-    <animate attributeName="r" values="126;154;126" dur="7s" repeatCount="indefinite"/>
+  <!-- ambient glow -->
+  <circle cx="150" cy="90" r="95" fill="url(#glow)">
+    <animate attributeName="r" values="88;104;88" dur="7s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- subtle digital lines -->
-  <g opacity="0.18" stroke="#1ED6FF" stroke-width="2" fill="none">
-    <path d="M40 70 H160 L210 120 H310"/>
-    <path d="M1335 66 H1495 L1560 130 H1615"/>
-    <path d="M70 725 H230 L290 682 H420"/>
-    <path d="M1250 728 H1425 L1490 690 H1600"/>
-  </g>
+  <circle cx="1030" cy="80" r="80" fill="url(#glow)" opacity="0.75">
+    <animate attributeName="r" values="72;88;72" dur="6.2s" repeatCount="indefinite"/>
+  </circle>
 
-  <!-- animated particles -->
-  <g fill="#46CCFF" opacity="0.65">
-    <circle cx="310" cy="86" r="3">
-      <animate attributeName="opacity" values="0.25;1;0.25" dur="2.6s" repeatCount="indefinite"/>
+  <!-- subtle particles -->
+  <g fill="#35C8FF" opacity="0.65">
+    <circle cx="228" cy="44" r="2.5">
+      <animate attributeName="opacity" values="0.25;1;0.25" dur="2.7s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="1280" cy="110" r="3">
-      <animate attributeName="opacity" values="1;0.2;1" dur="2.9s" repeatCount="indefinite"/>
+    <circle cx="948" cy="32" r="2.5">
+      <animate attributeName="opacity" values="1;0.25;1" dur="2.9s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="525" cy="298" r="2.8">
-      <animate attributeName="opacity" values="0.2;1;0.2" dur="3.1s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1038" cy="302" r="2.8">
-      <animate attributeName="opacity" values="1;0.3;1" dur="3.0s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1460" cy="264" r="3">
-      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.7s" repeatCount="indefinite"/>
+    <circle cx="1086" cy="150" r="2.5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3.1s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- header -->
-  <g transform="translate(70 54)">
-    <g filter="url(#glowSoft)">
-      <circle cx="88" cy="93" r="70" fill="#0D3D99" stroke="#2D66C9" stroke-width="3"/>
-      <rect x="26" y="78" width="124" height="16" rx="8" fill="#FFFFFF"/>
-      <rect x="26" y="94" width="124" height="16" rx="8" fill="#CF2027"/>
-      <rect x="26" y="110" width="124" height="16" rx="8" fill="#FFFFFF"/>
+  <!-- top left logo -->
+  <g transform="translate(42 30)" filter="url(#softGlow)">
+    <circle cx="68" cy="68" r="54" fill="#003893" stroke="#2B6CF0" stroke-width="2.5"/>
+    <rect x="23" y="59" width="90" height="8" rx="4" fill="#FFFFFF"/>
+    <rect x="23" y="68" width="90" height="8" rx="4" fill="#CF2027"/>
+    <rect x="23" y="77" width="90" height="8" rx="4" fill="#FFFFFF"/>
+    
+            <polygon points="68.00,22.20 69.47,25.98 73.52,26.21 70.38,28.77 71.41,32.69 68.00,30.50 64.59,32.69 65.62,28.77 62.48,26.21 66.53,25.98" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.2s" begin="-0.0s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.2s" begin="-0.0s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
+
+            <polygon points="91.51,29.84 92.98,33.62 97.03,33.85 93.89,36.41 94.92,40.33 91.51,38.14 88.10,40.33 89.13,36.41 86.00,33.85 90.04,33.62" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.45s" begin="-0.15s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.45s" begin="-0.15s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
+
+            <polygon points="106.04,49.84 107.51,53.62 111.56,53.85 108.42,56.41 109.45,60.33 106.04,58.14 102.63,60.33 103.66,56.41 100.53,53.85 104.57,53.62" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.7s" begin="-0.3s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.7s" begin="-0.3s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
+
+            <polygon points="106.04,74.56 107.51,78.34 111.56,78.57 108.42,81.13 109.45,85.05 106.04,82.86 102.63,85.05 103.66,81.13 100.53,78.57 104.57,78.34" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.95s" begin="-0.44999999999999996s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.95s" begin="-0.44999999999999996s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
+
+            <polygon points="91.51,94.56 92.98,98.34 97.03,98.57 93.89,101.13 94.92,105.05 91.51,102.86 88.10,105.05 89.13,101.13 86.00,98.57 90.04,98.34" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.2s" begin="-0.6s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.2s" begin="-0.6s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
+
+            <polygon points="68.00,102.20 69.47,105.98 73.52,106.21 70.38,108.77 71.41,112.69 68.00,110.50 64.59,112.69 65.62,108.77 62.48,106.21 66.53,105.98" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.45s" begin="-0.75s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.45s" begin="-0.75s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
+
+            <polygon points="44.49,94.56 45.96,98.34 50.00,98.57 46.87,101.13 47.90,105.05 44.49,102.86 41.08,105.05 42.11,101.13 38.97,98.57 43.02,98.34" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.7s" begin="-0.8999999999999999s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.7s" begin="-0.8999999999999999s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
+
+            <polygon points="29.96,74.56 31.43,78.34 35.47,78.57 32.34,81.13 33.37,85.05 29.96,82.86 26.55,85.05 27.58,81.13 24.44,78.57 28.49,78.34" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.95s" begin="-1.05s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.95s" begin="-1.05s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
+
+            <polygon points="29.96,49.84 31.43,53.62 35.47,53.85 32.34,56.41 33.37,60.33 29.96,58.14 26.55,60.33 27.58,56.41 24.44,53.85 28.49,53.62" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.2s" begin="-1.2s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.2s" begin="-1.2s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
+
+            <polygon points="44.49,29.84 45.96,33.62 50.00,33.85 46.87,36.41 47.90,40.33 44.49,38.14 41.08,40.33 42.11,36.41 38.97,33.85 43.02,33.62" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.45s" begin="-1.3499999999999999s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.45s" begin="-1.3499999999999999s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
+  </g>
+
+  <!-- header text -->
+  <text x="160" y="82" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">Cabo Verde Dev Pulse</text>
+  <text x="160" y="114" fill="#D7E9FF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">claudiogt1992-netizen • Cabo Verde • Systems Engineering &amp; Computer Science Student</text>
+  <text x="160" y="137" fill="#7DC3FF" font-family="Segoe UI, Arial, sans-serif" font-size="13">Atualizado: 01/06/2026 12:37</text>
+
+  <!-- header divider -->
+  <line x1="46" y1="160" x2="1148" y2="160" stroke="url(#cyanLine)" stroke-width="2"/>
+
+  <!-- top right animated flag -->
+  <g transform="translate(1010 36)" filter="url(#shadow)">
+    <rect x="0" y="0" width="142" height="90" rx="20" fill="#09182E" fill-opacity="0.78" stroke="#1E4C7D" stroke-opacity="0.45"/>
+
+    <g transform="translate(18 14)">
+      <animateTransform attributeName="transform" type="translate"
+        values="18 14;18 9;18 14"
+        dur="3.8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" additive="sum" type="rotate"
+        values="-4 54 30;4 54 30;-4 54 30"
+        dur="3.8s" repeatCount="indefinite"/>
+
+      <path fill="#003893">
+        <animate attributeName="d" dur="3.8s" repeatCount="indefinite"
+          values="
+          M0 8 C24 0, 52 14, 106 8 L106 58 C52 66, 24 52, 0 58 Z;
+          M0 8 C24 4, 52 12, 106 8 L106 58 C52 62, 24 54, 0 58 Z;
+          M0 8 C24 0, 52 14, 106 8 L106 58 C52 66, 24 52, 0 58 Z"/>
+      </path>
+
+      <path fill="#FFFFFF">
+        <animate attributeName="d" dur="3.8s" repeatCount="indefinite"
+          values="
+          M0 27 C24 24, 52 31, 106 27 L106 33 C52 36, 24 29, 0 33 Z;
+          M0 27 C24 25, 52 30, 106 27 L106 33 C52 35, 24 30, 0 33 Z;
+          M0 27 C24 24, 52 31, 106 27 L106 33 C52 36, 24 29, 0 33 Z"/>
+      </path>
+
+      <path fill="#CF2027">
+        <animate attributeName="d" dur="3.8s" repeatCount="indefinite"
+          values="
+          M0 33 C24 30, 52 37, 106 33 L106 42 C52 45, 24 38, 0 42 Z;
+          M0 33 C24 31, 52 36, 106 33 L106 42 C52 44, 24 39, 0 42 Z;
+          M0 33 C24 30, 52 37, 106 33 L106 42 C52 45, 24 38, 0 42 Z"/>
+      </path>
+
+      <path fill="#FFFFFF">
+        <animate attributeName="d" dur="3.8s" repeatCount="indefinite"
+          values="
+          M0 42 C24 39, 52 46, 106 42 L106 48 C52 51, 24 44, 0 48 Z;
+          M0 42 C24 40, 52 45, 106 42 L106 48 C52 50, 24 45, 0 48 Z;
+          M0 42 C24 39, 52 46, 106 42 L106 48 C52 51, 24 44, 0 48 Z"/>
+      </path>
+
       
-                <polygon points="88.00,32.50 90.23,37.93 96.08,38.37 91.61,42.17 93.00,47.88 88.00,44.80 83.00,47.88 84.39,42.17 79.92,38.37 85.77,37.93" fill="#F7D116" opacity="0.88">
-                  <animate attributeName="opacity" values="0.45;1;0.45" dur="1.90s" begin="-0.00s" repeatCount="indefinite"/>
-                  <animate attributeName="transform" attributeType="XML"
-                           type="scale" values="0.96 0.96;1.08 1.08;0.96 0.96"
-                           dur="1.90s" begin="-0.00s" repeatCount="indefinite"
-                           additive="sum" />
-                </polygon>
-                
+            <polygon points="58.00,17.80 58.79,19.91 61.04,20.01 59.28,21.42 59.88,23.59 58.00,22.35 56.12,23.59 56.72,21.42 54.96,20.01 57.21,19.91" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.2s" begin="-0.0s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.2s" begin="-0.0s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
 
-                <polygon points="118.56,42.43 120.80,47.86 126.65,48.30 122.18,52.11 123.56,57.81 118.56,54.73 113.57,57.81 114.95,52.11 110.48,48.30 116.33,47.86" fill="#F7D116" opacity="0.88">
-                  <animate attributeName="opacity" values="0.45;1;0.45" dur="2.12s" begin="-0.14s" repeatCount="indefinite"/>
-                  <animate attributeName="transform" attributeType="XML"
-                           type="scale" values="0.96 0.96;1.08 1.08;0.96 0.96"
-                           dur="2.12s" begin="-0.14s" repeatCount="indefinite"
-                           additive="sum" />
-                </polygon>
-                
+            <polygon points="69.17,21.43 69.96,23.54 72.21,23.64 70.45,25.05 71.05,27.22 69.17,25.98 67.29,27.22 67.88,25.05 66.12,23.64 68.37,23.54" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.45s" begin="-0.15s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.45s" begin="-0.15s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
 
-                <polygon points="137.45,68.43 139.69,73.86 145.54,74.30 141.07,78.11 142.45,83.81 137.45,80.73 132.46,83.81 133.84,78.11 129.37,74.30 135.22,73.86" fill="#F7D116" opacity="0.88">
-                  <animate attributeName="opacity" values="0.45;1;0.45" dur="2.34s" begin="-0.28s" repeatCount="indefinite"/>
-                  <animate attributeName="transform" attributeType="XML"
-                           type="scale" values="0.96 0.96;1.08 1.08;0.96 0.96"
-                           dur="2.34s" begin="-0.28s" repeatCount="indefinite"
-                           additive="sum" />
-                </polygon>
-                
+            <polygon points="76.07,30.93 76.86,33.04 79.11,33.14 77.35,34.55 77.95,36.72 76.07,35.48 74.19,36.72 74.79,34.55 73.03,33.14 75.28,33.04" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.7s" begin="-0.3s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.7s" begin="-0.3s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
 
-                <polygon points="137.45,100.57 139.69,105.99 145.54,106.44 141.07,110.24 142.45,115.95 137.45,112.87 132.46,115.95 133.84,110.24 129.37,106.44 135.22,105.99" fill="#F7D116" opacity="0.88">
-                  <animate attributeName="opacity" values="0.45;1;0.45" dur="2.56s" begin="-0.42s" repeatCount="indefinite"/>
-                  <animate attributeName="transform" attributeType="XML"
-                           type="scale" values="0.96 0.96;1.08 1.08;0.96 0.96"
-                           dur="2.56s" begin="-0.42s" repeatCount="indefinite"
-                           additive="sum" />
-                </polygon>
-                
+            <polygon points="76.07,42.67 76.86,44.78 79.11,44.88 77.35,46.29 77.95,48.46 76.07,47.22 74.19,48.46 74.79,46.29 73.03,44.88 75.28,44.78" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.95s" begin="-0.44999999999999996s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.95s" begin="-0.44999999999999996s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
 
-                <polygon points="118.56,126.57 120.80,131.99 126.65,132.44 122.18,136.24 123.56,141.95 118.56,138.87 113.57,141.95 114.95,136.24 110.48,132.44 116.33,131.99" fill="#F7D116" opacity="0.88">
-                  <animate attributeName="opacity" values="0.45;1;0.45" dur="1.90s" begin="-0.56s" repeatCount="indefinite"/>
-                  <animate attributeName="transform" attributeType="XML"
-                           type="scale" values="0.96 0.96;1.08 1.08;0.96 0.96"
-                           dur="1.90s" begin="-0.56s" repeatCount="indefinite"
-                           additive="sum" />
-                </polygon>
-                
+            <polygon points="69.17,52.17 69.96,54.28 72.21,54.38 70.45,55.79 71.05,57.96 69.17,56.72 67.29,57.96 67.88,55.79 66.12,54.38 68.37,54.28" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.2s" begin="-0.6s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.2s" begin="-0.6s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
 
-                <polygon points="88.00,136.50 90.23,141.93 96.08,142.37 91.61,146.17 93.00,151.88 88.00,148.80 83.00,151.88 84.39,146.17 79.92,142.37 85.77,141.93" fill="#F7D116" opacity="0.88">
-                  <animate attributeName="opacity" values="0.45;1;0.45" dur="2.12s" begin="-0.70s" repeatCount="indefinite"/>
-                  <animate attributeName="transform" attributeType="XML"
-                           type="scale" values="0.96 0.96;1.08 1.08;0.96 0.96"
-                           dur="2.12s" begin="-0.70s" repeatCount="indefinite"
-                           additive="sum" />
-                </polygon>
-                
+            <polygon points="58.00,55.80 58.79,57.91 61.04,58.01 59.28,59.42 59.88,61.59 58.00,60.35 56.12,61.59 56.72,59.42 54.96,58.01 57.21,57.91" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.45s" begin="-0.75s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.45s" begin="-0.75s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
 
-                <polygon points="57.44,126.57 59.67,131.99 65.52,132.44 61.05,136.24 62.43,141.95 57.44,138.87 52.44,141.95 53.82,136.24 49.35,132.44 55.20,131.99" fill="#F7D116" opacity="0.88">
-                  <animate attributeName="opacity" values="0.45;1;0.45" dur="2.34s" begin="-0.84s" repeatCount="indefinite"/>
-                  <animate attributeName="transform" attributeType="XML"
-                           type="scale" values="0.96 0.96;1.08 1.08;0.96 0.96"
-                           dur="2.34s" begin="-0.84s" repeatCount="indefinite"
-                           additive="sum" />
-                </polygon>
-                
+            <polygon points="46.83,52.17 47.63,54.28 49.88,54.38 48.12,55.79 48.71,57.96 46.83,56.72 44.95,57.96 45.55,55.79 43.79,54.38 46.04,54.28" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.7s" begin="-0.8999999999999999s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.7s" begin="-0.8999999999999999s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
 
-                <polygon points="38.55,100.57 40.78,105.99 46.63,106.44 42.16,110.24 43.54,115.95 38.55,112.87 33.55,115.95 34.93,110.24 30.46,106.44 36.31,105.99" fill="#F7D116" opacity="0.88">
-                  <animate attributeName="opacity" values="0.45;1;0.45" dur="2.56s" begin="-0.98s" repeatCount="indefinite"/>
-                  <animate attributeName="transform" attributeType="XML"
-                           type="scale" values="0.96 0.96;1.08 1.08;0.96 0.96"
-                           dur="2.56s" begin="-0.98s" repeatCount="indefinite"
-                           additive="sum" />
-                </polygon>
-                
+            <polygon points="39.93,42.67 40.72,44.78 42.97,44.88 41.21,46.29 41.81,48.46 39.93,47.22 38.05,48.46 38.65,46.29 36.89,44.88 39.14,44.78" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.95s" begin="-1.05s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.95s" begin="-1.05s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
 
-                <polygon points="38.55,68.43 40.78,73.86 46.63,74.30 42.16,78.11 43.54,83.81 38.55,80.73 33.55,83.81 34.93,78.11 30.46,74.30 36.31,73.86" fill="#F7D116" opacity="0.88">
-                  <animate attributeName="opacity" values="0.45;1;0.45" dur="1.90s" begin="-1.12s" repeatCount="indefinite"/>
-                  <animate attributeName="transform" attributeType="XML"
-                           type="scale" values="0.96 0.96;1.08 1.08;0.96 0.96"
-                           dur="1.90s" begin="-1.12s" repeatCount="indefinite"
-                           additive="sum" />
-                </polygon>
-                
+            <polygon points="39.93,30.93 40.72,33.04 42.97,33.14 41.21,34.55 41.81,36.72 39.93,35.48 38.05,36.72 38.65,34.55 36.89,33.14 39.14,33.04" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.2s" begin="-1.2s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.2s" begin="-1.2s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
 
-                <polygon points="57.44,42.43 59.67,47.86 65.52,48.30 61.05,52.11 62.43,57.81 57.44,54.73 52.44,57.81 53.82,52.11 49.35,48.30 55.20,47.86" fill="#F7D116" opacity="0.88">
-                  <animate attributeName="opacity" values="0.45;1;0.45" dur="2.12s" begin="-1.26s" repeatCount="indefinite"/>
-                  <animate attributeName="transform" attributeType="XML"
-                           type="scale" values="0.96 0.96;1.08 1.08;0.96 0.96"
-                           dur="2.12s" begin="-1.26s" repeatCount="indefinite"
-                           additive="sum" />
-                </polygon>
-                
-    </g>
-
-    <line x1="182" y1="28" x2="182" y2="157" stroke="#3B76D8" stroke-opacity="0.55" stroke-width="3"/>
-
-    <text x="216" y="70" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="800">Cabo Verde Dev Pulse</text>
-    <text x="216" y="121" fill="#D5E7FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">claudiogt1992-netizen • Cabo Verde • Systems Engineering &amp; Computer Science Student</text>
-    <text x="216" y="150" fill="#8ABFFF" font-family="Segoe UI, Arial, sans-serif" font-size="15">Atualizado: 01/06/2026 11:59</text>
-
-    <!-- waving flag without pole -->
-    <g transform="translate(1320 4)" filter="url(#shadowSoft)">
-      <rect x="0" y="0" width="190" height="150" rx="28" fill="#09162D" fill-opacity="0.55" stroke="#255189" stroke-opacity="0.55"/>
-      <g transform="translate(30 24)">
-        <animateTransform attributeName="transform" type="translate" values="30 24;30 18;30 24" dur="4.2s" repeatCount="indefinite"/>
-        <g>
-          <animateTransform attributeName="transform" type="rotate" values="-4 10 10;4 10 10;-4 10 10" dur="4.4s" repeatCount="indefinite"/>
-          <path fill="#003893">
-            <animate attributeName="d" dur="4.4s" repeatCount="indefinite"
-              values="
-                M0 12 C26 1, 62 21, 126 12 L126 92 C62 103, 26 83, 0 92 Z;
-                M0 12 C26 7, 62 17, 126 12 L126 92 C62 97, 26 87, 0 92 Z;
-                M0 12 C26 1, 62 21, 126 12 L126 92 C62 103, 26 83, 0 92 Z"/>
-          </path>
-          <path fill="#FFFFFF">
-            <animate attributeName="d" dur="4.4s" repeatCount="indefinite"
-              values="
-                M0 44 C26 39, 62 49, 126 44 L126 53 C62 58, 26 48, 0 53 Z;
-                M0 44 C26 41, 62 47, 126 44 L126 53 C62 56, 26 50, 0 53 Z;
-                M0 44 C26 39, 62 49, 126 44 L126 53 C62 58, 26 48, 0 53 Z"/>
-          </path>
-          <path fill="#CF2027">
-            <animate attributeName="d" dur="4.4s" repeatCount="indefinite"
-              values="
-                M0 53 C26 48, 62 58, 126 53 L126 66 C62 71, 26 61, 0 66 Z;
-                M0 53 C26 50, 62 56, 126 53 L126 66 C62 69, 26 63, 0 66 Z;
-                M0 53 C26 48, 62 58, 126 53 L126 66 C62 71, 26 61, 0 66 Z"/>
-          </path>
-          <path fill="#FFFFFF">
-            <animate attributeName="d" dur="4.4s" repeatCount="indefinite"
-              values="
-                M0 66 C26 61, 62 71, 126 66 L126 75 C62 80, 26 70, 0 75 Z;
-                M0 66 C26 63, 62 69, 126 66 L126 75 C62 78, 26 72, 0 75 Z;
-                M0 66 C26 61, 62 71, 126 66 L126 75 C62 80, 26 70, 0 75 Z"/>
-          </path>
-          <g><polygon points="74.00,18.70 75.12,21.46 78.09,21.67 75.81,23.59 76.53,26.48 74.00,24.90 71.47,26.48 72.19,23.59 69.91,21.67 72.88,21.46" fill="#F7D116" opacity="0.95"/>
-<polygon points="89.87,23.86 90.99,26.62 93.96,26.83 91.68,28.74 92.40,31.64 89.87,30.06 87.34,31.64 88.06,28.74 85.78,26.83 88.75,26.62" fill="#F7D116" opacity="0.95"/>
-<polygon points="99.68,37.36 100.80,40.12 103.77,40.33 101.49,42.24 102.21,45.14 99.68,43.56 97.15,45.14 97.87,42.24 95.59,40.33 98.56,40.12" fill="#F7D116" opacity="0.95"/>
-<polygon points="99.68,54.04 100.80,56.81 103.77,57.01 101.49,58.93 102.21,61.82 99.68,60.24 97.15,61.82 97.87,58.93 95.59,57.01 98.56,56.81" fill="#F7D116" opacity="0.95"/>
-<polygon points="89.87,67.54 90.99,70.31 93.96,70.51 91.68,72.43 92.40,75.32 89.87,73.74 87.34,75.32 88.06,72.43 85.78,70.51 88.75,70.31" fill="#F7D116" opacity="0.95"/>
-<polygon points="74.00,72.70 75.12,75.46 78.09,75.67 75.81,77.59 76.53,80.48 74.00,78.90 71.47,80.48 72.19,77.59 69.91,75.67 72.88,75.46" fill="#F7D116" opacity="0.95"/>
-<polygon points="58.13,67.54 59.25,70.31 62.22,70.51 59.94,72.43 60.66,75.32 58.13,73.74 55.60,75.32 56.32,72.43 54.04,70.51 57.01,70.31" fill="#F7D116" opacity="0.95"/>
-<polygon points="48.32,54.04 49.44,56.81 52.41,57.01 50.13,58.93 50.85,61.82 48.32,60.24 45.79,61.82 46.51,58.93 44.23,57.01 47.20,56.81" fill="#F7D116" opacity="0.95"/>
-<polygon points="48.32,37.36 49.44,40.12 52.41,40.33 50.13,42.24 50.85,45.14 48.32,43.56 45.79,45.14 46.51,42.24 44.23,40.33 47.20,40.12" fill="#F7D116" opacity="0.95"/>
-<polygon points="58.13,23.86 59.25,26.62 62.22,26.83 59.94,28.74 60.66,31.64 58.13,30.06 55.60,31.64 56.32,28.74 54.04,26.83 57.01,26.62" fill="#F7D116" opacity="0.95"/></g>
-        </g>
-      </g>
+            <polygon points="46.83,21.43 47.63,23.54 49.88,23.64 48.12,25.05 48.71,27.22 46.83,25.98 44.95,27.22 45.55,25.05 43.79,23.64 46.04,23.54" fill="#F7D116" opacity="0.88">
+              <animate attributeName="opacity" values="0.45;1;0.45" dur="2.45s" begin="-1.3499999999999999s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.96;1.08;0.96" dur="2.45s" begin="-1.3499999999999999s" repeatCount="indefinite" additive="sum"/>
+            </polygon>
+            
     </g>
   </g>
-
-  <!-- divider -->
-  <line x1="70" y1="218" x2="1580" y2="218" stroke="#214B88" stroke-opacity="0.60" stroke-width="2"/>
 
   <!-- main title -->
-  <text x="825" y="356" text-anchor="middle" fill="#F7FBFF" font-family="Segoe UI, Arial, sans-serif" font-size="84" font-weight="800">
-    <tspan>Full Stack </tspan><tspan fill="#14C8FF">Java</tspan><tspan> Developer in Progress</tspan>
+  <text x="600" y="220" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="800">
+    <tspan>Full Stack </tspan><tspan fill="#12CBFF">Java</tspan><tspan> Developer in Progress</tspan>
   </text>
 
-  <!-- subtitle -->
-  <g>
-    <line x1="280" y1="420" x2="420" y2="420" stroke="#11C9FF" stroke-width="4" stroke-linecap="round"/>
-    <line x1="1230" y1="420" x2="1370" y2="420" stroke="#11C9FF" stroke-width="4" stroke-linecap="round"/>
-    <text x="825" y="432" text-anchor="middle" fill="#A9C8FF" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="500">Systems Engineering &amp; Computer Science Student</text>
-  </g>
+  <!-- subtitle moved away from icons -->
+  <text x="600" y="250" text-anchor="middle" fill="#AFCFFF" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="500">
+    Systems Engineering &amp; Computer Science Student
+  </text>
 
-  <!-- technology row -->
-  <g>
-    
-    <g transform="translate(150 402)">
+  <!-- tech row -->
+  
+    <g transform="translate(150 248)">
       <animateTransform attributeName="transform" type="translate"
-                        values="150 402;150 398;150 402"
-                        dur="3.8s" begin="-0.00s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.88;1;0.88" dur="2.8s" begin="-0.00s" repeatCount="indefinite"/>
-    
-      <g filter="url(#techGlow)">
-        <path d="M31 4 C26 10, 38 12, 31 18 C27 21, 29 24, 34 26" fill="none" stroke="#23A4FF" stroke-width="3.2" stroke-linecap="round"/>
-        <path d="M38 0 C33 6, 43 8, 38 14 C34 17, 36 20, 41 22" fill="none" stroke="#23A4FF" stroke-width="3.2" stroke-linecap="round" opacity="0.9"/>
-        <path d="M16 27 C22 23, 42 22, 49 27" fill="none" stroke="#23A4FF" stroke-width="3.5" stroke-linecap="round"/>
-        <path d="M19 28 L21 45 C21.4 48 23 49 25 49 L39 49 C41 49 42.6 48 43 45 L45 28" fill="none" stroke="#23A4FF" stroke-width="3.5" stroke-linejoin="round"/>
-        <path d="M14 35 L18 36" fill="none" stroke="#23A4FF" stroke-width="3.2" stroke-linecap="round"/>
-        <path d="M46 36 L50 35" fill="none" stroke="#23A4FF" stroke-width="3.2" stroke-linecap="round"/>
-      </g>
-        
-      <text x="64" y="12" fill="#F4F8FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Java</text>
+        values="150 248;150 246;150 248"
+        dur="3.2s" begin="-0.0s" repeatCount="indefinite"/>
+
+      <rect width="120" height="38" rx="19" fill="#09192E" fill-opacity="0.92" stroke="#00BFFF" stroke-opacity="0.28"/>
+      <circle cx="19" cy="19" r="5.5" fill="#00BFFF">
+        <animate attributeName="opacity" values="0.45;1;0.45" dur="2.5s" begin="-0.0s" repeatCount="indefinite"/>
+      </circle>
+      <text x="33" y="24" fill="#F2F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Java</text>
     </g>
     
 
-    <g transform="translate(355 402)">
+    <g transform="translate(288 248)">
       <animateTransform attributeName="transform" type="translate"
-                        values="355 402;355 398;355 402"
-                        dur="3.8s" begin="-0.22s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.88;1;0.88" dur="2.8s" begin="-0.22s" repeatCount="indefinite"/>
-    
-      <g filter="url(#techGlow)">
-        <polygon points="33,2 53,14 53,38 33,50 13,38 13,14" fill="none" stroke="#75D13B" stroke-width="3.2" stroke-linejoin="round"/>
-        <path d="M38 13 C31 14, 26 19, 25 26 C24 32, 27 38, 34 40 C42 42, 49 37, 49 28 C49 22, 45 17, 39 15 Z"
-              fill="none" stroke="#75D13B" stroke-width="3.2" stroke-linejoin="round"/>
-        <path d="M34 40 C33 29, 39 22, 46 18" fill="none" stroke="#75D13B" stroke-width="2.8" stroke-linecap="round"/>
-      </g>
-        
-      <text x="64" y="12" fill="#F4F8FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Spring Boot</text>
+        values="288 248;288 246;288 248"
+        dur="3.2s" begin="-0.22s" repeatCount="indefinite"/>
+
+      <rect width="120" height="38" rx="19" fill="#09192E" fill-opacity="0.92" stroke="#6DB33F" stroke-opacity="0.28"/>
+      <circle cx="19" cy="19" r="5.5" fill="#6DB33F">
+        <animate attributeName="opacity" values="0.45;1;0.45" dur="2.5s" begin="-0.22s" repeatCount="indefinite"/>
+      </circle>
+      <text x="33" y="24" fill="#F2F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Spring</text>
     </g>
     
 
-    <g transform="translate(560 402)">
+    <g transform="translate(426 248)">
       <animateTransform attributeName="transform" type="translate"
-                        values="560 402;560 398;560 402"
-                        dur="3.8s" begin="-0.44s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.88;1;0.88" dur="2.8s" begin="-0.44s" repeatCount="indefinite"/>
-    
-      <g filter="url(#techGlow)">
-        <ellipse cx="33" cy="26" rx="24" ry="9" fill="none" stroke="#18E5FF" stroke-width="3"/>
-        <ellipse cx="33" cy="26" rx="24" ry="9" fill="none" stroke="#18E5FF" stroke-width="3" transform="rotate(60 33 26)"/>
-        <ellipse cx="33" cy="26" rx="24" ry="9" fill="none" stroke="#18E5FF" stroke-width="3" transform="rotate(-60 33 26)"/>
-        <circle cx="33" cy="26" r="4.6" fill="#18E5FF"/>
-      </g>
-        
-      <text x="64" y="12" fill="#F4F8FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">React</text>
+        values="426 248;426 246;426 248"
+        dur="3.2s" begin="-0.44s" repeatCount="indefinite"/>
+
+      <rect width="120" height="38" rx="19" fill="#09192E" fill-opacity="0.92" stroke="#19D8FF" stroke-opacity="0.28"/>
+      <circle cx="19" cy="19" r="5.5" fill="#19D8FF">
+        <animate attributeName="opacity" values="0.45;1;0.45" dur="2.5s" begin="-0.44s" repeatCount="indefinite"/>
+      </circle>
+      <text x="33" y="24" fill="#F2F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">React</text>
     </g>
     
 
-    <g transform="translate(765 402)">
+    <g transform="translate(564 248)">
       <animateTransform attributeName="transform" type="translate"
-                        values="765 402;765 398;765 402"
-                        dur="3.8s" begin="-0.66s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.88;1;0.88" dur="2.8s" begin="-0.66s" repeatCount="indefinite"/>
-    
-      <g filter="url(#techGlow)">
-        <polygon points="33,3 53,10 49,39 33,49 17,39 13,10" fill="none" stroke="#FF2D55" stroke-width="3.2" stroke-linejoin="round"/>
-        <path d="M33 14 L22 38" fill="none" stroke="#FF2D55" stroke-width="3.2" stroke-linecap="round"/>
-        <path d="M33 14 L44 38" fill="none" stroke="#FF2D55" stroke-width="3.2" stroke-linecap="round"/>
-        <path d="M26.5 29 L39.5 29" fill="none" stroke="#FF2D55" stroke-width="3.2" stroke-linecap="round"/>
-      </g>
-        
-      <text x="64" y="12" fill="#F4F8FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Angular</text>
+        values="564 248;564 246;564 248"
+        dur="3.2s" begin="-0.66s" repeatCount="indefinite"/>
+
+      <rect width="120" height="38" rx="19" fill="#09192E" fill-opacity="0.92" stroke="#FF3B5C" stroke-opacity="0.28"/>
+      <circle cx="19" cy="19" r="5.5" fill="#FF3B5C">
+        <animate attributeName="opacity" values="0.45;1;0.45" dur="2.5s" begin="-0.66s" repeatCount="indefinite"/>
+      </circle>
+      <text x="33" y="24" fill="#F2F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Angular</text>
     </g>
     
 
-    <g transform="translate(970 402)">
+    <g transform="translate(702 248)">
       <animateTransform attributeName="transform" type="translate"
-                        values="970 402;970 398;970 402"
-                        dur="3.8s" begin="-0.88s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.88;1;0.88" dur="2.8s" begin="-0.88s" repeatCount="indefinite"/>
-    
-      <g filter="url(#techGlow)">
-        <rect x="10" y="4" width="46" height="46" rx="9" fill="none" stroke="#FFD21F" stroke-width="3.2"/>
-        <text x="18" y="37" fill="#FFD21F" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800">JS</text>
-      </g>
-        
-      <text x="64" y="12" fill="#F4F8FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">JavaScript</text>
+        values="702 248;702 246;702 248"
+        dur="3.2s" begin="-0.88s" repeatCount="indefinite"/>
+
+      <rect width="120" height="38" rx="19" fill="#09192E" fill-opacity="0.92" stroke="#F7D116" stroke-opacity="0.28"/>
+      <circle cx="19" cy="19" r="5.5" fill="#F7D116">
+        <animate attributeName="opacity" values="0.45;1;0.45" dur="2.5s" begin="-0.88s" repeatCount="indefinite"/>
+      </circle>
+      <text x="33" y="24" fill="#F2F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">JavaScript</text>
     </g>
     
 
-    <g transform="translate(1175 402)">
+    <g transform="translate(840 248)">
       <animateTransform attributeName="transform" type="translate"
-                        values="1175 402;1175 398;1175 402"
-                        dur="3.8s" begin="-1.10s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.88;1;0.88" dur="2.8s" begin="-1.10s" repeatCount="indefinite"/>
-    
-      <g filter="url(#techGlow)">
-        <rect x="10" y="4" width="46" height="46" rx="9" fill="none" stroke="#2EA8FF" stroke-width="3.2"/>
-        <text x="16" y="37" fill="#2EA8FF" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800">TS</text>
-      </g>
-        
-      <text x="64" y="12" fill="#F4F8FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">TypeScript</text>
+        values="840 248;840 246;840 248"
+        dur="3.2s" begin="-1.1s" repeatCount="indefinite"/>
+
+      <rect width="120" height="38" rx="19" fill="#09192E" fill-opacity="0.92" stroke="#2F86FF" stroke-opacity="0.28"/>
+      <circle cx="19" cy="19" r="5.5" fill="#2F86FF">
+        <animate attributeName="opacity" values="0.45;1;0.45" dur="2.5s" begin="-1.1s" repeatCount="indefinite"/>
+      </circle>
+      <text x="33" y="24" fill="#F2F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">TypeScript</text>
     </g>
     
 
-    <g transform="translate(1380 402)">
+    <g transform="translate(978 248)">
       <animateTransform attributeName="transform" type="translate"
-                        values="1380 402;1380 398;1380 402"
-                        dur="3.8s" begin="-1.32s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.88;1;0.88" dur="2.8s" begin="-1.32s" repeatCount="indefinite"/>
-    
-      <g filter="url(#techGlow)">
-        <path d="M20 17 C20 10, 25 7, 32 7 L40 7 C46 7, 50 11, 50 17 L50 24 L29 24 C23 24, 19 28, 19 34 C19 41, 24 45, 30 45 L38 45 C44 45, 48 41, 48 35"
-              fill="none" stroke="#F4C542" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="39" cy="15" r="1.8" fill="#F4C542"/>
-        <path d="M46 36 C46 43, 41 46, 34 46 L26 46 C20 46, 16 42, 16 36 L16 29 L37 29 C43 29, 47 25, 47 19 C47 12, 42 8, 36 8 L28 8 C22 8, 18 12, 18 18"
-              fill="none" stroke="#5AA9FF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="27" cy="38" r="1.8" fill="#5AA9FF"/>
-      </g>
-        
-      <text x="64" y="12" fill="#F4F8FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Python</text>
-    </g>
-    
-  </g>
+        values="978 248;978 246;978 248"
+        dur="3.2s" begin="-1.32s" repeatCount="indefinite"/>
 
-  <!-- stats cards -->
-  <g>
-    
-    <g transform="translate(70 530)" filter="url(#shadowSoft)">
-      <rect x="0" y="0" width="282" height="132" rx="24" fill="url(#cardGlass)" stroke="rgba(255,255,255,0.10)"/>
-      <rect x="0.7" y="0.7" width="280.6" height="130.6" rx="23.3" fill="none" stroke="#38B6FF" stroke-opacity="0.30"/>
-      <rect x="0" y="0" width="282" height="132" rx="24" fill="url(#cardInnerGlow)" opacity="0.55"/>
-      <rect x="-70" y="-10" width="56" height="152" rx="18" fill="url(#shine)">
-        <animateTransform attributeName="transform" type="translate"
-                          values="0 0;432 0"
-                          dur="4.8s" begin="-0.10s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.65;0" dur="4.8s" begin="-0.10s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="0" y="0" width="282" height="132" rx="24" fill="none" stroke="#38B6FF">
-        <animate attributeName="stroke-opacity" values="0.22;0.58;0.22" dur="3.2s" begin="-0.10s" repeatCount="indefinite"/>
-      </rect>
-      
-        <g transform="translate(108 572)" stroke="#38B6FF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="-16" y="-18" width="32" height="36" rx="6"/>
-          <path d="M-7 -8 H7"/>
-          <path d="M-7 0 H10"/>
-          <path d="M-7 8 H5"/>
-        </g>
-        
-      <text x="155" y="74" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">
-        <animate attributeName="opacity" values="0.88;1;0.88" dur="2.6s" begin="-0.10s" repeatCount="indefinite"/>
-        2
-      </text>
-      <text x="155" y="112" text-anchor="middle" fill="#B8D9FF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Repositórios</text>
+      <rect width="120" height="38" rx="19" fill="#09192E" fill-opacity="0.92" stroke="#FFD43B" stroke-opacity="0.28"/>
+      <circle cx="19" cy="19" r="5.5" fill="#FFD43B">
+        <animate attributeName="opacity" values="0.45;1;0.45" dur="2.5s" begin="-1.32s" repeatCount="indefinite"/>
+      </circle>
+      <text x="33" y="24" fill="#F2F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Python</text>
     </g>
     
 
-    <g transform="translate(374 530)" filter="url(#shadowSoft)">
-      <rect x="0" y="0" width="282" height="132" rx="24" fill="url(#cardGlass)" stroke="rgba(255,255,255,0.10)"/>
-      <rect x="0.7" y="0.7" width="280.6" height="130.6" rx="23.3" fill="none" stroke="#53B8FF" stroke-opacity="0.30"/>
-      <rect x="0" y="0" width="282" height="132" rx="24" fill="url(#cardInnerGlow)" opacity="0.55"/>
-      <rect x="-70" y="-10" width="56" height="152" rx="18" fill="url(#shine)">
-        <animateTransform attributeName="transform" type="translate"
-                          values="0 0;432 0"
-                          dur="4.8s" begin="-0.60s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.65;0" dur="4.8s" begin="-0.60s" repeatCount="indefinite"/>
+  <!-- stat cards -->
+  
+    <g transform="translate(70 328)">
+      <rect width="190" height="88" rx="22" fill="#08172B" fill-opacity="0.84" stroke="#00AEEF" stroke-opacity="0.32"/>
+      <rect width="190" height="88" rx="22" fill="none" stroke="#00AEEF">
+        <animate attributeName="stroke-opacity" values="0.22;0.62;0.22" dur="3.2s" begin="-0.1s" repeatCount="indefinite"/>
       </rect>
-      <rect x="0" y="0" width="282" height="132" rx="24" fill="none" stroke="#53B8FF">
-        <animate attributeName="stroke-opacity" values="0.22;0.58;0.22" dur="3.2s" begin="-0.60s" repeatCount="indefinite"/>
+
+      <rect x="-42" y="0" width="34" height="88" rx="17" fill="#FFFFFF" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;280 0" dur="5.2s" begin="-0.1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.13;0" dur="5.2s" begin="-0.1s" repeatCount="indefinite"/>
       </rect>
-      
-        <g transform="translate(412 572)" stroke="#53B8FF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="-6" cy="-8" r="7"/>
-          <circle cx="10" cy="-2" r="6"/>
-          <path d="M-18 18 C-16 7, 2 7, 6 18"/>
-          <path d="M2 18 C4 10, 16 10, 20 18"/>
-        </g>
-        
-      <text x="459" y="74" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">
-        <animate attributeName="opacity" values="0.88;1;0.88" dur="2.6s" begin="-0.60s" repeatCount="indefinite"/>
-        1
-      </text>
-      <text x="459" y="112" text-anchor="middle" fill="#B8D9FF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Seguidores</text>
+
+      <text x="95.0" y="42" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">2</text>
+      <text x="95.0" y="68" text-anchor="middle" fill="#BEDBFF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Repositórios</text>
     </g>
     
 
-    <g transform="translate(678 530)" filter="url(#shadowSoft)">
-      <rect x="0" y="0" width="282" height="132" rx="24" fill="url(#cardGlass)" stroke="rgba(255,255,255,0.10)"/>
-      <rect x="0.7" y="0.7" width="280.6" height="130.6" rx="23.3" fill="none" stroke="#43B4FF" stroke-opacity="0.30"/>
-      <rect x="0" y="0" width="282" height="132" rx="24" fill="url(#cardInnerGlow)" opacity="0.55"/>
-      <rect x="-70" y="-10" width="56" height="152" rx="18" fill="url(#shine)">
-        <animateTransform attributeName="transform" type="translate"
-                          values="0 0;432 0"
-                          dur="4.8s" begin="-1.10s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.65;0" dur="4.8s" begin="-1.10s" repeatCount="indefinite"/>
+    <g transform="translate(284 328)">
+      <rect width="190" height="88" rx="22" fill="#08172B" fill-opacity="0.84" stroke="#2FB6FF" stroke-opacity="0.32"/>
+      <rect width="190" height="88" rx="22" fill="none" stroke="#2FB6FF">
+        <animate attributeName="stroke-opacity" values="0.22;0.62;0.22" dur="3.2s" begin="-0.5s" repeatCount="indefinite"/>
       </rect>
-      <rect x="0" y="0" width="282" height="132" rx="24" fill="none" stroke="#43B4FF">
-        <animate attributeName="stroke-opacity" values="0.22;0.58;0.22" dur="3.2s" begin="-1.10s" repeatCount="indefinite"/>
+
+      <rect x="-42" y="0" width="34" height="88" rx="17" fill="#FFFFFF" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;280 0" dur="5.2s" begin="-0.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.13;0" dur="5.2s" begin="-0.5s" repeatCount="indefinite"/>
       </rect>
-      
-        <g transform="translate(716 572)" stroke="#43B4FF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="0.00,-18.00 4.70,-6.47 17.12,-5.56 7.61,2.47 10.58,14.56 0.00,8.00 -10.58,14.56 -7.61,2.47 -17.12,-5.56 -4.70,-6.47"/>
-        </g>
-        
-      <text x="763" y="74" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">
-        <animate attributeName="opacity" values="0.88;1;0.88" dur="2.6s" begin="-1.10s" repeatCount="indefinite"/>
-        0
-      </text>
-      <text x="763" y="112" text-anchor="middle" fill="#B8D9FF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Estrelas</text>
+
+      <text x="95.0" y="42" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">1</text>
+      <text x="95.0" y="68" text-anchor="middle" fill="#BEDBFF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Seguidores</text>
     </g>
     
 
-    <g transform="translate(982 530)" filter="url(#shadowSoft)">
-      <rect x="0" y="0" width="282" height="132" rx="24" fill="url(#cardGlass)" stroke="rgba(255,255,255,0.10)"/>
-      <rect x="0.7" y="0.7" width="280.6" height="130.6" rx="23.3" fill="none" stroke="#8E6BFF" stroke-opacity="0.30"/>
-      <rect x="0" y="0" width="282" height="132" rx="24" fill="url(#cardInnerGlow)" opacity="0.55"/>
-      <rect x="-70" y="-10" width="56" height="152" rx="18" fill="url(#shine)">
-        <animateTransform attributeName="transform" type="translate"
-                          values="0 0;432 0"
-                          dur="4.8s" begin="-1.60s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.65;0" dur="4.8s" begin="-1.60s" repeatCount="indefinite"/>
+    <g transform="translate(498 328)">
+      <rect width="190" height="88" rx="22" fill="#08172B" fill-opacity="0.84" stroke="#F7D116" stroke-opacity="0.32"/>
+      <rect width="190" height="88" rx="22" fill="none" stroke="#F7D116">
+        <animate attributeName="stroke-opacity" values="0.22;0.62;0.22" dur="3.2s" begin="-0.9s" repeatCount="indefinite"/>
       </rect>
-      <rect x="0" y="0" width="282" height="132" rx="24" fill="none" stroke="#8E6BFF">
-        <animate attributeName="stroke-opacity" values="0.22;0.58;0.22" dur="3.2s" begin="-1.60s" repeatCount="indefinite"/>
+
+      <rect x="-42" y="0" width="34" height="88" rx="17" fill="#FFFFFF" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;280 0" dur="5.2s" begin="-0.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.13;0" dur="5.2s" begin="-0.9s" repeatCount="indefinite"/>
       </rect>
-      
-        <g transform="translate(1020 572)" stroke="#8E6BFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="0" cy="-16" r="5"/>
-          <circle cx="-12" cy="16" r="5"/>
-          <circle cx="12" cy="16" r="5"/>
-          <path d="M0 -11 V4"/>
-          <path d="M0 4 H-12 V11"/>
-          <path d="M0 4 H12 V11"/>
-        </g>
-        
-      <text x="1067" y="74" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">
-        <animate attributeName="opacity" values="0.88;1;0.88" dur="2.6s" begin="-1.60s" repeatCount="indefinite"/>
-        0
-      </text>
-      <text x="1067" y="112" text-anchor="middle" fill="#B8D9FF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Forks</text>
+
+      <text x="95.0" y="42" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">0</text>
+      <text x="95.0" y="68" text-anchor="middle" fill="#BEDBFF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Estrelas</text>
     </g>
     
 
-    <g transform="translate(1286 530)" filter="url(#shadowSoft)">
-      <rect x="0" y="0" width="292" height="132" rx="24" fill="url(#cardGlass)" stroke="rgba(255,255,255,0.10)"/>
-      <rect x="0.7" y="0.7" width="290.6" height="130.6" rx="23.3" fill="none" stroke="#B26BFF" stroke-opacity="0.30"/>
-      <rect x="0" y="0" width="292" height="132" rx="24" fill="url(#cardInnerGlow)" opacity="0.55"/>
-      <rect x="-70" y="-10" width="56" height="152" rx="18" fill="url(#shine)">
-        <animateTransform attributeName="transform" type="translate"
-                          values="0 0;442 0"
-                          dur="4.8s" begin="-2.10s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.65;0" dur="4.8s" begin="-2.10s" repeatCount="indefinite"/>
+    <g transform="translate(712 328)">
+      <rect width="190" height="88" rx="22" fill="#08172B" fill-opacity="0.84" stroke="#8B5CF6" stroke-opacity="0.32"/>
+      <rect width="190" height="88" rx="22" fill="none" stroke="#8B5CF6">
+        <animate attributeName="stroke-opacity" values="0.22;0.62;0.22" dur="3.2s" begin="-1.3s" repeatCount="indefinite"/>
       </rect>
-      <rect x="0" y="0" width="292" height="132" rx="24" fill="none" stroke="#B26BFF">
-        <animate attributeName="stroke-opacity" values="0.22;0.58;0.22" dur="3.2s" begin="-2.10s" repeatCount="indefinite"/>
+
+      <rect x="-42" y="0" width="34" height="88" rx="17" fill="#FFFFFF" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;280 0" dur="5.2s" begin="-1.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.13;0" dur="5.2s" begin="-1.3s" repeatCount="indefinite"/>
       </rect>
-      
-        <g transform="translate(1324 572)" stroke="#B26BFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="0" cy="-8" r="10"/>
-          <path d="M-18 18 C-15 5, 15 5, 18 18"/>
-        </g>
-        
-      <text x="1371" y="74" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">
-        <animate attributeName="opacity" values="0.88;1;0.88" dur="2.6s" begin="-2.10s" repeatCount="indefinite"/>
-        2
-      </text>
-      <text x="1371" y="112" text-anchor="middle" fill="#B8D9FF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Seguindo</text>
+
+      <text x="95.0" y="42" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">0</text>
+      <text x="95.0" y="68" text-anchor="middle" fill="#BEDBFF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Forks</text>
     </g>
     
-  </g>
 
-  <!-- footer slogan -->
-  <g transform="translate(825 758)">
-    <g filter="url(#techGlow)" opacity="0.95">
-      <path d="M-150 2 L-138 -6 L-126 0 L-116 -8 L-104 -2 L-92 -10 L-80 -4" fill="none" stroke="#0EC8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="-138" cy="-6" r="2.8" fill="#0EC8FF"/>
-      <circle cx="-116" cy="-8" r="2.8" fill="#0EC8FF"/>
-      <circle cx="-92" cy="-10" r="2.8" fill="#0EC8FF"/>
+    <g transform="translate(926 328)">
+      <rect width="190" height="88" rx="22" fill="#08172B" fill-opacity="0.84" stroke="#C084FC" stroke-opacity="0.32"/>
+      <rect width="190" height="88" rx="22" fill="none" stroke="#C084FC">
+        <animate attributeName="stroke-opacity" values="0.22;0.62;0.22" dur="3.2s" begin="-1.7s" repeatCount="indefinite"/>
+      </rect>
+
+      <rect x="-42" y="0" width="34" height="88" rx="17" fill="#FFFFFF" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;280 0" dur="5.2s" begin="-1.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.13;0" dur="5.2s" begin="-1.7s" repeatCount="indefinite"/>
+      </rect>
+
+      <text x="95.0" y="42" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">2</text>
+      <text x="95.0" y="68" text-anchor="middle" fill="#BEDBFF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Seguindo</text>
     </g>
-    <text x="0" y="10" text-anchor="middle" fill="#CDE3FF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="500">10 ilhas • 1 visão • tecnologia com identidade</text>
-  </g>
+    
 
-  <!-- subtle ocean movement -->
-  <path d="M0 620 C160 596, 330 654, 500 628 C680 600, 860 660, 1040 630 C1200 604, 1380 654, 1650 622 L1650 820 L0 820 Z"
-        fill="url(#ocean1)">
-    <animateTransform attributeName="transform" type="translate" values="-20 0;20 0;-20 0" dur="8s" repeatCount="indefinite"/>
+  <!-- ocean motion -->
+  <path d="M0 345 C150 326, 300 362, 450 345 C600 328, 750 362, 900 345 C1030 330, 1115 350, 1200 340 L1200 430 L0 430 Z" fill="url(#ocean)">
+    <animateTransform attributeName="transform" type="translate" values="-14 0;14 0;-14 0" dur="8s" repeatCount="indefinite"/>
   </path>
 
-  <path d="M0 650 C190 626, 380 690, 560 662 C760 632, 950 696, 1130 665 C1310 638, 1480 686, 1650 658 L1650 820 L0 820 Z"
-        fill="url(#ocean2)">
-    <animateTransform attributeName="transform" type="translate" values="22 0;-22 0;22 0" dur="10.5s" repeatCount="indefinite"/>
-  </path>
-
-  <!-- soft foreground digital beam -->
-  <rect x="-120" y="0" width="90" height="820" fill="url(#cyanBeam)" opacity="0.14">
-    <animateTransform attributeName="transform" type="translate" values="0 0;1860 0" dur="16s" repeatCount="indefinite"/>
-  </rect>
+  <!-- footer -->
+  <text x="600" y="396" text-anchor="middle" fill="#C0DDFF" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="500">
+    10 ilhas • 1 visão • tecnologia com identidade
+  </text>
 </svg>
