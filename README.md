@@ -30,7 +30,7 @@ Meu objetivo é construir soluções modernas, seguras e escaláveis para a web.
   <img src="https://skillicons.dev/icons?i=java,spring,angular,react,js,ts,python,html,css,php,git,github,vscode" />
 </p>
 
-**Java • Spring Boot • Angular • React • JavaScript • TypeScript • Python • HTML • CSS • PHP**
+          **Java • Spring Boot • Angular • React • JavaScript • TypeScript • Python • HTML • CSS • PHP**
 
 ---
 
