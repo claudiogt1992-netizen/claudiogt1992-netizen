@@ -2,6 +2,13 @@
   <img src="./github-banner.png" alt="Banner do GitHub de Cláudio Tavares" width="100%" />
 </p>
 
+<p align="center">
+  <img src="./assets/cabo-verde-dev-pulse.svg" alt="Cabo Verde Dev Pulse" width="100%" />
+</p>
+<p align="center">
+  <img src="./github-banner.png" alt="Banner do GitHub de Cláudio Tavares" width="100%" />
+</p>
+
 <h1 align="center">Olá, eu sou Cláudio Tavares 👋</h1>
 
 <h3 align="center">
