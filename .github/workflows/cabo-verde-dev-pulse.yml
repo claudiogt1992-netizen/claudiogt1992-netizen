@@ -1,0 +1,31 @@
+name: Generate Cabo Verde Dev Pulse
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate Cabo Verde profile SVG
+        run: python scripts/generate_cv_profile.py
+        env:
+          GITHUB_USERNAME: claudiogt1992-netizen
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit updated SVG
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add assets/cabo-verde-dev-pulse.svg
+          git commit -m "Update Cabo Verde Dev Pulse" || echo "No changes to commit"
+          git push
