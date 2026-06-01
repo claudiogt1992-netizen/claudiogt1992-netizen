@@ -153,7 +153,7 @@ def main():
     ])
 
     logo_ring = star_ring(68, 68, 40, 5.8, 2.5, True)
-    flag_ring_static = star_ring(54, 34, 17, 2.9, 1.25, False)
+    flag_ring_static = star_ring(52, 24, 15, 2.9, 1.25, False)
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-label="Cabo Verde Dev Pulse">
   <defs>
