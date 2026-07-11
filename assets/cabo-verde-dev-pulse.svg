@@ -120,7 +120,7 @@
   <!-- header text -->
   <text x="170" y="82" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">Cabo Verde Dev Pulse</text>
   <text x="170" y="114" fill="#D7E9FF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">claudiogt1992-netizen • Cabo Verde • Systems Engineering &amp; Computer Science Student</text>
-  <text x="170" y="137" fill="#7DC3FF" font-family="Segoe UI, Arial, sans-serif" font-size="13">Atualizado: 10/07/2026 09:42</text>
+  <text x="170" y="137" fill="#7DC3FF" font-family="Segoe UI, Arial, sans-serif" font-size="13">Atualizado: 11/07/2026 08:15</text>
 
   <!-- header divider -->
   <line x1="46" y1="160" x2="1148" y2="160" stroke="url(#cyanLine)" stroke-width="2"/>
