@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Java-em%20estudo-E76F00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
   <img src="https://img.shields.io/badge/Linux-em%20prática-0EA5E9?style=for-the-badge&logo=linux&logoColor=white" alt="Linux" />
   <img src="https://img.shields.io/badge/Redes-em%20desenvolvimento-2563EB?style=for-the-badge" alt="Redes" />
   <img src="https://img.shields.io/badge/Segurança-em%20evolução-F59E0B?style=for-the-badge&logo=securityscorecard&logoColor=white" alt="Segurança" />
@@ -24,7 +25,7 @@ Sou estudante do **3.º ano de Engenharia de Sistemas e Informática na Universi
 
 Atualmente trabalho no **Banco de Cabo Verde** como **Agente de Segurança**, função que desempenho desde 2018. Essa experiência reforçou competências que levo comigo para a tecnologia: **disciplina, responsabilidade, atenção aos detalhes, confidencialidade, controlo de acessos e cumprimento rigoroso de procedimentos**.
 
-Paralelamente, venho a desenvolver uma base técnica em **sistemas operativos, redes de computadores, Help Desk, Linux e segurança da informação**. Também frequento o programa **Skodji Digital**, ainda em andamento, onde continuo a evoluir em áreas como **Linux e Segurança na Cloud, Business Intelligence, Inteligência Artificial, Engenharia de Software e Python para Dados**.
+Paralelamente, venho a desenvolver uma base técnica em **sistemas operativos, redes de computadores, Help Desk, Linux e segurança da informação**. Estou também a estudar **Java**, reforçando fundamentos de programação e desenvolvimento de software. Além disso, frequento o programa **Skodji Digital**, ainda em andamento, onde continuo a evoluir em áreas como **Linux e Segurança na Cloud, Business Intelligence, Inteligência Artificial, Engenharia de Software e Python para Dados**.
 
 > O meu foco é simples: aprender, praticar e transformar conhecimento em projetos que possam ser demonstrados.
 
@@ -34,25 +35,26 @@ Paralelamente, venho a desenvolver uma base técnica em **sistemas operativos, r
 
 | Base que já venho construindo | Em desenvolvimento atualmente | Próximos passos |
 |---|---|---|
-| Sistemas Operativos | Python para Dados | Projetos completos de portfólio |
-| Redes de Computadores | Business Intelligence | Cloud na prática |
-| Help Desk | Engenharia de Software | APIs e aplicações |
-| Linux / Ubuntu Server | Inteligência Artificial | Dashboards e análise de dados |
-| Segurança da Informação | Git e GitHub | Integração entre software, dados e segurança |
+| Sistemas Operativos | Java e fundamentos de programação | Projetos Java para portfólio |
+| Redes de Computadores | Python para Dados | Projetos completos de portfólio |
+| Help Desk | Business Intelligence | Cloud na prática |
+| Linux / Ubuntu Server | Engenharia de Software | APIs e aplicações |
+| Segurança da Informação | Inteligência Artificial | Dashboards e análise de dados |
+| Git e GitHub | Documentação técnica | Integração entre software, dados e segurança |
 
 ---
 
 ## 🛠️ Tecnologias e áreas
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=linux,python,git,github,vscode,mysql" alt="Tecnologias em aprendizagem e utilização" />
+  <img src="https://skillicons.dev/icons?i=java,linux,python,git,github,vscode,mysql" alt="Tecnologias em aprendizagem e utilização" />
 </p>
 
 <p align="center">
-  <strong>Sistemas & Redes</strong> • <strong>Help Desk</strong> • <strong>Linux</strong> • <strong>Segurança</strong> • <strong>Python</strong> • <strong>Dados</strong> • <strong>Cloud</strong>
+  <strong>Java</strong> • <strong>Sistemas & Redes</strong> • <strong>Help Desk</strong> • <strong>Linux</strong> • <strong>Segurança</strong> • <strong>Python</strong> • <strong>Dados</strong> • <strong>Cloud</strong>
 </p>
 
-<sub>As tecnologias aparecem aqui à medida que são estudadas e utilizadas em atividades ou projetos reais.</sub>
+<sub>As tecnologias aparecem aqui à medida que são estudadas e utilizadas em atividades ou projetos reais. Java está atualmente em estudo e ganhará maior destaque à medida que os projetos forem publicados.</sub>
 
 ---
 
@@ -75,9 +77,13 @@ Neste repositório documento atividades relacionadas com:
 
 ---
 
-## 🚀 Projeto principal de portfólio
+## 🚀 Próximos projetos de portfólio
 
-Estou a preparar um projeto mais completo que combine conhecimentos de **software, dados, cloud e segurança**. A ideia é construir uma solução funcional, bem documentada e adequada para apresentação em **portfólio e Demo Day**.
+Quero transformar a aprendizagem atual em projetos demonstráveis. Entre os próximos passos estão:
+
+- um projeto em **Java** para consolidar lógica, orientação a objetos e organização de código;
+- um projeto mais completo combinando **software, dados, cloud e segurança**;
+- projetos desenvolvidos ao longo do **Skodji Digital**, conforme os módulos forem concluídos.
 
 O GitHub será atualizado por etapas, mostrando não apenas o resultado final, mas também a evolução do projeto.
 
@@ -93,7 +99,7 @@ O GitHub será atualizado por etapas, mostrando não apenas o resultado final, m
 
 ## 🎯 Objetivo profissional
 
-Construir uma carreira em **Tecnologias de Informação** com uma base técnica sólida e demonstrável. Tenho especial interesse em **sistemas e redes, suporte técnico, desenvolvimento de software, dados, cloud e cibersegurança**.
+Construir uma carreira em **Tecnologias de Informação** com uma base técnica sólida e demonstrável. Tenho especial interesse em **sistemas e redes, suporte técnico, desenvolvimento de software, Java, dados, cloud e cibersegurança**.
 
 Quero que este perfil seja uma prova da minha evolução: menos promessas, mais **projetos, documentação e resultados reais**.
 
