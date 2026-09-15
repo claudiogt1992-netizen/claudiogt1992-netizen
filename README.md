@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/cabo-verde-dev-pulse.svg" alt="Cláudio Tavares — Engenharia de Sistemas e Informática" width="100%" />
+</p>
+
 <h1 align="center">Olá, eu sou Cláudio Tavares 👋</h1>
 
 <p align="center">
@@ -6,7 +10,10 @@
 </p>
 
 <p align="center">
-  Sistemas • Redes • Linux • Help Desk • Segurança da Informação • Python em aprendizagem
+  <img src="https://img.shields.io/badge/Linux-em%20prática-0EA5E9?style=for-the-badge&logo=linux&logoColor=white" alt="Linux" />
+  <img src="https://img.shields.io/badge/Redes-em%20desenvolvimento-2563EB?style=for-the-badge" alt="Redes" />
+  <img src="https://img.shields.io/badge/Segurança-em%20evolução-F59E0B?style=for-the-badge&logo=securityscorecard&logoColor=white" alt="Segurança" />
+  <img src="https://img.shields.io/badge/Python-em%20aprendizagem-16A34A?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
 </p>
 
 ---
@@ -15,83 +22,91 @@
 
 Sou estudante do **3.º ano de Engenharia de Sistemas e Informática na Universidade Jean Piaget de Cabo Verde** e estou a construir uma transição profissional sólida para a área de **Tecnologias de Informação**.
 
-Atualmente trabalho no **Banco de Cabo Verde** como **Agente de Segurança**, função que desempenho desde 2018. Esta experiência reforçou competências como disciplina, responsabilidade, atenção aos detalhes, confidencialidade, cumprimento de procedimentos e foco na proteção de pessoas, instalações e ativos.
+Atualmente trabalho no **Banco de Cabo Verde** como **Agente de Segurança**, função que desempenho desde 2018. Essa experiência reforçou competências que levo comigo para a tecnologia: **disciplina, responsabilidade, atenção aos detalhes, confidencialidade, controlo de acessos e cumprimento rigoroso de procedimentos**.
 
-Paralelamente, venho a desenvolver uma base técnica em **sistemas operativos, redes de computadores, Help Desk, Linux e segurança da informação**, enquanto aprofundo programação, desenvolvimento de software, dados e cloud através da universidade, estudo autónomo e do programa **Skodji Digital**, ainda em andamento.
+Paralelamente, venho a desenvolver uma base técnica em **sistemas operativos, redes de computadores, Help Desk, Linux e segurança da informação**. Também frequento o programa **Skodji Digital**, ainda em andamento, onde continuo a evoluir em áreas como **Linux e Segurança na Cloud, Business Intelligence, Inteligência Artificial, Engenharia de Software e Python para Dados**.
 
-O meu objetivo é evoluir de forma progressiva e realista para uma função em TI, transformando aprendizagem em projetos práticos e construindo um portfólio que demonstre aquilo que realmente sei fazer.
-
----
-
-## 🎓 Formação em andamento
-
-- **Engenharia de Sistemas e Informática** — Universidade Jean Piaget de Cabo Verde — **3.º ano**
-- **Skodji Digital** — formação tecnológica **em andamento**
-
-### Áreas atualmente em desenvolvimento no Skodji Digital
-
-- Linux e Segurança na Cloud
-- Business Intelligence
-- Inteligência Artificial
-- Engenharia de Software
-- Python para Dados
-- Ferramentas de colaboração e trabalho remoto
+> O meu foco é simples: aprender, praticar e transformar conhecimento em projetos que possam ser demonstrados.
 
 ---
 
-## 🧩 Competências em desenvolvimento
+## 🧭 Onde estou agora
 
-### Sistemas e infraestrutura
-- Linux / Ubuntu Server
-- Sistemas Operativos
-- Redes de Computadores
-- Help Desk
-- Administração de Sistemas
-- Fundamentos de Cloud Computing
-
-### Segurança
-- Permissões Linux e princípio do menor privilégio
-- Controlo de acessos
-- Segurança da Informação
-- Fundamentos de Cibersegurança
-
-### Desenvolvimento e dados
-- Python — em aprendizagem e prática
-- Git e GitHub
-- Fundamentos de programação e desenvolvimento de software
-- Bases de Dados / SQL — em desenvolvimento
-- Business Intelligence — em formação
-
-> Este perfil é atualizado à medida que novas competências são comprovadas através de projetos e atividades práticas.
+| Base que já venho construindo | Em desenvolvimento atualmente | Próximos passos |
+|---|---|---|
+| Sistemas Operativos | Python para Dados | Projetos completos de portfólio |
+| Redes de Computadores | Business Intelligence | Cloud na prática |
+| Help Desk | Engenharia de Software | APIs e aplicações |
+| Linux / Ubuntu Server | Inteligência Artificial | Dashboards e análise de dados |
+| Segurança da Informação | Git e GitHub | Integração entre software, dados e segurança |
 
 ---
 
-## 📌 Projetos
+## 🛠️ Tecnologias e áreas
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=linux,python,git,github,vscode,mysql" alt="Tecnologias em aprendizagem e utilização" />
+</p>
+
+<p align="center">
+  <strong>Sistemas & Redes</strong> • <strong>Help Desk</strong> • <strong>Linux</strong> • <strong>Segurança</strong> • <strong>Python</strong> • <strong>Dados</strong> • <strong>Cloud</strong>
+</p>
+
+<sub>As tecnologias aparecem aqui à medida que são estudadas e utilizadas em atividades ou projetos reais.</sub>
+
+---
+
+## 📌 Projeto em destaque
 
 ### 🐧 [Linux, Segurança e Cloud](https://github.com/claudiogt1992-netizen/linux-seguranca-cloud)
 
-Laboratório desenvolvido no contexto da formação Skodji Digital, com atividades práticas em **Ubuntu Server**, comandos Linux, permissões de ficheiros, princípio do menor privilégio, preparação para acesso remoto via SSH e registo de evidências.
+Laboratório prático desenvolvido no contexto da formação **Skodji Digital**, utilizando **Ubuntu Server numa VM VMware**.
 
-**Estado:** em evolução conforme avanço na formação.
+Neste repositório documento atividades relacionadas com:
 
-### 🚧 Próximo projeto de portfólio
+- comandos Linux e organização do ambiente;
+- utilizadores, grupos e permissões;
+- princípio do menor privilégio;
+- preparação para acesso remoto via SSH;
+- conceitos de VM, VPS e infraestrutura cloud;
+- evidências e documentação técnica da aprendizagem.
 
-Estou a preparar um projeto mais completo para consolidar competências de **software, dados, cloud e segurança**, com foco em resolução de problemas, documentação e apresentação profissional.
+**Estado:** projeto em evolução conforme avanço na formação.
+
+---
+
+## 🚀 Projeto principal de portfólio
+
+Estou a preparar um projeto mais completo que combine conhecimentos de **software, dados, cloud e segurança**. A ideia é construir uma solução funcional, bem documentada e adequada para apresentação em **portfólio e Demo Day**.
+
+O GitHub será atualizado por etapas, mostrando não apenas o resultado final, mas também a evolução do projeto.
+
+---
+
+## 🎮 Minha jornada
+
+<p align="center">
+  <img src="./assets/platformer-animation.svg" alt="Jornada em Tecnologias de Informação" width="100%" />
+</p>
 
 ---
 
 ## 🎯 Objetivo profissional
 
-Construir uma carreira em Tecnologias de Informação com uma base técnica sólida e demonstrável. Tenho especial interesse em **sistemas e redes, suporte técnico, desenvolvimento de software, dados, cloud e cibersegurança**.
+Construir uma carreira em **Tecnologias de Informação** com uma base técnica sólida e demonstrável. Tenho especial interesse em **sistemas e redes, suporte técnico, desenvolvimento de software, dados, cloud e cibersegurança**.
+
+Quero que este perfil seja uma prova da minha evolução: menos promessas, mais **projetos, documentação e resultados reais**.
 
 ---
 
-## 🔗 Contacto profissional
-
-- [LinkedIn — Cláudio Tavares](https://www.linkedin.com/in/claudiojgtavares/)
-
----
+## 🤝 Vamos conectar
 
 <p align="center">
-  <strong>Aprender com consistência. Praticar com propósito. Evoluir com resultados.</strong>
+  <a href="https://www.linkedin.com/in/claudiojgtavares/">
+    <img src="https://img.shields.io/badge/LinkedIn-Cláudio%20Tavares-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+</p>
+
+<p align="center">
+  <strong>Disciplina • Aprendizagem • Evolução • Tecnologia</strong>
 </p>
