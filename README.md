@@ -60,7 +60,7 @@ Paralelamente, venho a desenvolver uma base técnica em **sistemas operativos, r
 
 ## 📌 Projeto em destaque
 
-### 🐧 [Linux, Segurança e Cloud](https://github.com/claudiogt1992-netizen/linux-seguranca-cloud)
+### 🐧 [Linux, Segurança e Cloud](https://github.com/claudiojgtavares/linux-seguranca-cloud)
 
 Laboratório prático desenvolvido no contexto da formação **Skodji Digital**, utilizando **Ubuntu Server numa VM VMware**.
 
