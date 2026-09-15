@@ -17,7 +17,7 @@ jobs:
       - name: Generate Cabo Verde profile SVG
         run: python scripts/generate_cv_profile.py
         env:
-          GITHUB_USERNAME: claudiogt1992-netizen
+          GITHUB_USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit updated SVG
